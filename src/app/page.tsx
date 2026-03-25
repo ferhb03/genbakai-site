@@ -30,7 +30,7 @@ export default function Home() {
               <img
                 src="/logo1.png"
                 alt="Genba-Kai logo"
-                className="h-10 w-auto object-contain"
+                className="h-15 w-auto object-contain"
               />
 
               <div>
