@@ -26,12 +26,20 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div>
-            <div className="text-xl font-semibold tracking-tight">GENBA-KAI</div>
-            <div className="text-sm text-slate-500">
-              Diagnósticos, formación y consultoría
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo1.png"
+                alt="Genba-Kai logo"
+                className="h-10 w-auto object-contain"
+              />
+
+              <div>
+                <div className="text-xl font-semibold tracking-tight">GENBA-KAI</div>
+                <div className="text-sm text-slate-500">
+                  Diagnósticos, formación y consultoría
+                </div>
+              </div>
             </div>
-          </div>
 
           <nav className="hidden gap-6 text-sm md:flex">
             <Link href="/diagnosticos" className="hover:text-slate-700">
