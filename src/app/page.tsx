@@ -86,10 +86,12 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 bg-slate-100 p-8">
-            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm leading-6 text-slate-500">
-              Imagen principal sugerida:
-              <br />
-              escena Gemba / tablero estándar / entorno industrial sobrio
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white">
+              <img
+                src="/hero-industrial.jpg"
+                alt="Entorno industrial con trabajo estandarizado y gestión visual"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
