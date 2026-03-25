@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   const paths = [
     {
@@ -32,9 +34,9 @@ export default function Home() {
           </div>
 
           <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#diagnosticos" className="hover:text-slate-700">
+            <Link href="/diagnosticos" className="hover:text-slate-700">
               Diagnósticos
-            </a>
+            </Link>
             <a href="#formacion" className="hover:text-slate-700">
               Formación
             </a>
@@ -186,9 +188,19 @@ export default function Home() {
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 {item.description}
               </p>
-              <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
-                {item.button}
-              </button>
+
+              {item.title === "Diagnósticos" ? (
+                <Link
+                  href="/diagnosticos"
+                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium"
+                >
+                  {item.button}
+                </Link>
+              ) : (
+                <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
+                  {item.button}
+                </button>
+              )}
             </div>
           ))}
         </div>
@@ -215,8 +227,10 @@ export default function Home() {
               podrás mostrar también futuros diagnósticos.
             </p>
             <a
-              href="#"
-              className="mt-6 inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+            href="https://checklists.genbakai.com/5s"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
             >
               Realizar diagnóstico
             </a>
