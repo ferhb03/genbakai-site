@@ -86,9 +86,9 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-slate-200 bg-slate-100 p-8">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
               <img
-                src="/hero-industrial.jpg"
+                src="/hero-industrial.png"
                 alt="Entorno industrial con trabajo estandarizado y gestión visual"
                 className="w-full h-full object-cover"
               />
@@ -317,36 +317,63 @@ export default function Home() {
       </section>
 
       <section id="sobre" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-          <div className="rounded-3xl border border-slate-200 bg-slate-100 p-6">
-            <div className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-500">
-              Foto profesional de Fernando
+          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+            <div className="rounded-3xl border border-slate-200 bg-slate-100 p-6">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
+                <img
+                  src="/fernando-benitez.png"
+                  alt="Fernando Benitez en entorno industrial"
+                  className="w-full h-full object-cover object-left"
+                />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+                Sobre Fernando
+              </p>
+
+              <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+                Fernando Benitez
+              </h2>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Experiencia real en operaciones industriales, estandarización y mejora
+                continua aplicada.
+              </p>
+
+              <div className="mt-8 space-y-6 text-base leading-8 text-slate-600">
+                <p>
+                  Con más de 15 años de experiencia en entornos industriales exigentes,
+                  he trabajado en la implementación real de principios del Toyota
+                  Production System (TPS), Lean Manufacturing y mejora continua en
+                  plantas de Toyota en Argentina y Brasil.
+                </p>
+
+                <p className="italic text-slate-700">
+                  Mi enfoque práctico se basa en la observación directa del proceso, la
+                  estandarización operativa y la resolución de problemas reales,
+                  simplificando la complejidad para transformarla en sistemas más
+                  claros, aplicables y sostenibles.
+                </p>
+
+                <p>
+                  Hoy acompaño a dueños, gerentes, líderes y equipos que buscan
+                  recuperar estabilidad operativa, desarrollar personas y mejorar
+                  resultados a través de métodos simples, concretos y alineados con la
+                  realidad de planta.
+                </p>
+              </div>
+
+              <button
+                disabled
+                className="mt-8 inline-flex rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-400 cursor-not-allowed"
+              >
+                Ver consultoría (próximamente)
+              </button>
             </div>
           </div>
-
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              Sobre Fernando
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Experiencia industrial aplicada a la mejora continua.
-            </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
-              Fernando Benitez es ingeniero mecánico-aeronáutico con experiencia
-              en operaciones industriales, mejora de procesos, estandarización y
-              desarrollo de equipos. Genba-kai nace como una plataforma para
-              compartir herramientas, formación y acompañamiento con una mirada
-              práctica inspirada en el TPS.
-            </p>
-            <a
-              href="#"
-              className="mt-6 inline-flex rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800"
-            >
-              Conocer más
-            </a>
-          </div>
-        </div>
-      </section>
+       </section>
 
       <section id="comunidad" className="border-y border-slate-200 bg-slate-50 py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
