@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 export default function DiagnosticosPage() {
   return (
@@ -37,6 +38,7 @@ export default function DiagnosticosPage() {
               href="https://checklists.genbakai.com/5s"
               target="_blank"
               rel="noreferrer"
+              onClick={() => track("click_diagnostico_5s")}
               className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
             >
               Ir al checklist 5S
@@ -63,6 +65,7 @@ export default function DiagnosticosPage() {
               href="https://checklists.genbakai.com/standard-work"
               target="_blank"
               rel="noreferrer"
+              onClick={() => track("click_standard_work")}
               className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
             >
               Ir a Standard Work
