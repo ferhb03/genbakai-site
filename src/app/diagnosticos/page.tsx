@@ -55,7 +55,7 @@ export default function DiagnosticosPage() {
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">
             Disponible ahora
           </p>
-          <h2 className="mt-3 text-2xl font-semibold">Standard Work</h2>
+          <h2 className="mt-3 text-2xl font-semibold">Trabajo Estandarizado</h2>
           <p className="mt-4 text-base leading-7 text-slate-600">
             Diagnóstico para evaluar el nivel de definición, claridad y aplicación del
             trabajo estandarizado como base de estabilidad, entrenamiento y mejora
@@ -70,7 +70,7 @@ export default function DiagnosticosPage() {
               onClick={() => track("click_standard_work")}
               className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
             >
-              Ir a Standard Work
+              Ir a Trabajo Estandarizado
             </a>
             <p className="mt-3 text-xs text-slate-500">
               Evaluación inicial para detectar brechas en estandarización operativa.
