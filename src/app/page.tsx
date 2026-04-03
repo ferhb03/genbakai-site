@@ -462,7 +462,14 @@ export default function Home() {
               Contacto
             </div>
             <div className="mt-4 space-y-2 text-sm text-slate-600">
-              <div>LinkedIn</div>
+              <a
+                href="https://www.linkedin.com/in/fernando-horacio-benitez"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                LinkedIn
+              </a>
               <div>fernando.benitez@genbakai.com</div>
             </div>
           </div>
