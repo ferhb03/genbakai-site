@@ -272,9 +272,9 @@ export default function Home() {
               href="/brochure-genbakai.pdf"
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100"
+              className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
             >
-              Ver Como Trabajamos
+              VER COMO TRABAJAMOS
             </a>
 
           </div>
@@ -348,12 +348,11 @@ export default function Home() {
                 </p>
               </div>
 
-              <button
-                disabled
-                className="mt-8 inline-flex rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-400 cursor-not-allowed"
+              <a href="/#consultoria"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-normal text-slate-800 hover:bg-slate-100"
               >
-                Ver consultoría (próximamente)
-              </button>
+                Ver consultoría
+              </a>
             </div>
           </div>
        </section>
@@ -403,7 +402,7 @@ export default function Home() {
             </a>
             <a
               href="#consultoria"
-              className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800"
+              className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-normal text-slate-800"
             >
               Ver consultoría
             </a>
