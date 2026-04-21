@@ -25,37 +25,39 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-            <div className="flex items-center gap-3">
-              <img
-                src="/logo1.png"
-                alt="Genba-Kai logo"
-                className="h-15 w-auto object-contain"
-              />
+        <div className="mx-auto max-w-6xl px-4 py-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo1.png"
+              alt="Genba-Kai logo"
+              className="h-10 w-auto object-contain md:h-12"
+            />
 
-              <div>
-                <div className="text-xl font-semibold tracking-tight">GENBA-KAI</div>
-                <div className="text-sm text-slate-500">
-                  Diagnósticos, formación y consultoría
-                </div>
+            <div>
+              <div className="text-lg font-semibold tracking-tight md:text-xl">
+                GENBA-KAI
+              </div>
+              <div className="text-xs text-slate-500 md:text-sm">
+                Diagnósticos, formación y consultoría
               </div>
             </div>
+          </div>
 
-          <nav className="hidden gap-6 text-sm md:flex">
-            <Link href="/diagnosticos" className="hover:text-slate-700">
-              Diagnósticos
+          <nav className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-xs md:mt-0 md:flex md:flex-wrap md:gap-6 md:text-sm">
+            <Link href="/diagnosticos" className="whitespace-nowrap hover:text-slate-700">
+              DIAGNÓSTICOS
             </Link>
-            <a href="#formacion" className="hover:text-slate-700">
-              Formación
+            <a href="#formacion" className="whitespace-nowrap hover:text-slate-700">
+              FORMACIÓN
             </a>
-            <a href="#comunidad" className="hover:text-slate-700">
-              Comunidad
+            <a href="#comunidad" className="whitespace-nowrap hover:text-slate-700">
+              COMUNIDAD
             </a>
-            <a href="#consultoria" className="hover:text-slate-700">
-              Consultoría
+            <a href="#consultoria" className="whitespace-nowrap hover:text-slate-700">
+              CONSULTORÍA
             </a>
-            <a href="#sobre" className="hover:text-slate-700">
-              Sobre Fernando
+            <a href="#sobre" className="whitespace-nowrap hover:text-slate-700">
+              SOBRE FERNANDO
             </a>
           </nav>
         </div>
@@ -79,7 +81,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#diagnosticos"
+                href="/diagnosticos"
                 className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
               >
                 Explorar diagnósticos
