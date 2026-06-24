@@ -24,7 +24,7 @@ export default function SiteHeader() {
 
         <nav className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-xs md:mt-0 md:flex md:flex-wrap md:gap-6 md:text-sm font-semibold">
           <Link href="/diagnosticos" className="whitespace-nowrap hover:text-slate-700">
-            DISGNÓSTICOS
+            DIAGNÓSTICOS
           </Link>
           <a href="/#formacion" className="whitespace-nowrap hover:text-slate-700">
             FORMACIÓN
