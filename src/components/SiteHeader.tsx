@@ -9,7 +9,7 @@ export default function SiteHeader() {
           <img
             src="/logo1.png"
             alt="Genba-Kai logo"
-            className="h-10 w-auto object-contain md:h-20"
+            className="h-12 w-auto object-contain md:h-20"
           />
 
           <div>
