@@ -128,7 +128,7 @@ export default function Home() {
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Observar en el Gemba</h3>
+              <h3 className="text-lg font-semibold">Observar en el Genba</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 La realidad operativa es el punto de partida para diagnosticar y
                 decidir.
@@ -291,7 +291,7 @@ export default function Home() {
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
               <h3 className="text-xl font-semibold">Consultoría presencial</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Acompañamiento en planta para observar en Gemba, detectar brechas,
+                Acompañamiento en planta para observar en Genba, detectar brechas,
                 estandarizar y trabajar sobre oportunidades reales.
               </p>
             </div>
