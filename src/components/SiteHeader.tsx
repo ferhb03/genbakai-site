@@ -13,7 +13,7 @@ export default function SiteHeader() {
           />
 
           <div>
-            <div className="text-lg font-semibold tracking-tight md:text-xl">
+            <div className="text-lg font-semibold tracking-tight md:text-xl text-slate-900">
               GENBA-KAI
             </div>
             <div className="text-xs text-slate-500 md:text-sm">
