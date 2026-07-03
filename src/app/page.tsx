@@ -33,7 +33,7 @@ export default function Home() {
               MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
             </p>
 
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
               Estandarización, gestión visual y mejora operativa para construir procesos más estables, simples y controlables
             </h1>
 
