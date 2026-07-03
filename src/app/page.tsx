@@ -30,16 +30,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              Desarrollo de personas para mejorar sistemas
+              MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
             </p>
 
-            <h1 className="max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              Estabilidad operativa basada en personas, estándar y criterio.
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+              Estandarización, gestión visual y mejora operativa para construir procesos más estables, simples y controlables
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Diagnósticos, formación y consultoría inspirados en los principios
-              del Toyota Production System.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+              Implementación en planta junto al equipo para reducir desperdicios, hacer visibles los problemas, mejorar la productividad y sostener una forma de trabajo más ordenada y controlada.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
