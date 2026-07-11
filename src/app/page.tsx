@@ -266,6 +266,9 @@ export default function Home() {
               organizaciones que buscan mejorar estabilidad operativa y desarrollar
               capacidades internas.
             </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              ¿Queres saber como trabajamos? Descargá nuestro brochure y conocé nuestra propuesta de valor, metodología y sistema.
+            </p>
 
             <a
               href="/Brochure_Genba-Kai_2026.pdf"
@@ -273,7 +276,7 @@ export default function Home() {
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
             >
-              VER COMO TRABAJAMOS - DESCARGAR BROCHURE
+              DESCARGAR BROCHURE
             </a>
 
           </div>
