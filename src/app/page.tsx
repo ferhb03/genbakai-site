@@ -273,7 +273,7 @@ export default function Home() {
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
             >
-              VER COMO TRABAJAMOS
+              VER COMO TRABAJAMOS - DESCARGAR BROCHURE
             </a>
 
           </div>
