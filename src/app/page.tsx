@@ -268,7 +268,7 @@ export default function Home() {
             </p>
 
             <a
-              href="/brochure-genbakai.pdf"
+              href="/Brochure_Genba-Kai_2026.pdf"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
