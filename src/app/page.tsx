@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-slate-100 p-8">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
               <img
                 src="/hero-industrial.png"
@@ -180,8 +180,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="diagnosticos" className="bg-slate-50 py-20">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+      <section id="información" className="bg-slate-50 py-20">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               Formación
@@ -272,8 +272,8 @@ export default function Home() {
       <section id="sobre" className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
-            <div className="rounded-3xl border border-slate-200 bg-slate-100 p-6">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
                 <img
                   src="/fernando-benitez.png"
                   alt="Fernando Benitez en entorno industrial"
