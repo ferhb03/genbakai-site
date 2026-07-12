@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      <section className="border-b border-slate-200">
+      <section id="enfoque" className="bg-slate-50 py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -182,78 +182,47 @@ export default function Home() {
 
       <section id="diagnosticos" className="bg-slate-50 py-20">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
-          <div>
+          <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              Diagnóstico destacado
+              Formación
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Checklist 5S
+              Aprender a construir sistemas de producción propios.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-              Evalúa el estado actual de la implementación de 5S y obtén una base
-              inicial para detectar brechas y próximos pasos.
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Recursos prácticos para comprender cómo diseñar, implementar
+              y sostener sistemas de producción basados en principios Lean
+              y Toyota Production System, adaptados a PyMEs industriales.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-6">
-            <p className="text-sm leading-6 text-slate-600">
-              Puerta de entrada actual hacia el ecosistema Genba-kai. Aquí luego
-              podrás mostrar también futuros diagnósticos.
-            </p>
-            <a
-            href="https://checklists.genbakai.com/5s"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
-            >
-              Realizar diagnóstico
-            </a>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">Ebook</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Material conceptual y práctico para entender los fundamentos del
+                sistema y aplicarlos en la realidad operativa.
+              </p>
+              <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
+                Próximamente
+              </button>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">Cursos</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Programas estructurados para profundizar en principios TPS,
+                estabilidad operativa y desarrollo de personas.
+              </p>
+              <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
+                Próximamente
+              </button>
+            </div>
           </div>
-        </div>
+         </div> 
       </section>
 
-      <section id="formacion" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            Formación
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Aprender principios TPS aplicados a operaciones reales.
-          </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Recursos diseñados para comprender la lógica del sistema, más allá de
-            las herramientas. Incluye ebooks, cursos y materiales prácticos para
-            desarrollar criterio en mejora continua.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 p-6">
-            <h3 className="text-xl font-semibold">Ebook</h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Material conceptual y práctico para entender los fundamentos del
-              sistema y aplicarlos en la realidad operativa.
-            </p>
-            <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
-              Ver ebook
-            </button>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 p-6">
-            <h3 className="text-xl font-semibold">Cursos</h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Programas estructurados para profundizar en principios TPS,
-              estabilidad operativa y desarrollo de personas.
-            </p>
-            <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
-              Ver cursos
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="consultoria" className="bg-slate-50 py-20">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               Consultoría
@@ -262,9 +231,9 @@ export default function Home() {
               Acompañamiento para transformar criterio en implementación.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Modalidades flexibles para trabajar con profesionales, equipos y
-              organizaciones que buscan mejorar estabilidad operativa y desarrollar
-              capacidades internas.
+              Acompañamiento práctico para ayudar a empresas industriales
+              a construir procesos más estables, desarrollar personas y mejorar
+              resultados mediante un sistema de trabajo propio.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
               ¿Queres saber como trabajamos? Descargá nuestro brochure y conocé nuestra propuesta de valor, metodología y sistema.
@@ -298,10 +267,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
       </section>
 
-      <section id="sobre" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="sobre" className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
             <div className="rounded-3xl border border-slate-200 bg-slate-100 p-6">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
@@ -357,9 +326,10 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
        </section>
 
-      <section id="comunidad" className="border-y border-slate-200 bg-slate-50 py-20">
+      <section id="comunidad" className="border-y border-slate-200 bg-white py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Comunidad futura
@@ -386,28 +356,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            Cierre
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Mejorar procesos comienza por comprender cómo funcionan hoy.
-          </h2>
+      <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+              Cierre
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+              Mejorar procesos comienza por comprender cómo funcionan hoy.
+            </h2>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="#diagnosticos"
-              className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
-            >
-              Explorar diagnósticos
-            </a>
-            <a
-              href="#consultoria"
-              className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-normal text-slate-800"
-            >
-              Ver consultoría
-            </a>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                href="#diagnosticos"
+                className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+              >
+                Explorar diagnósticos
+              </a>
+              <a
+                href="#consultoria"
+                className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-normal text-slate-800"
+              >
+                Ver consultoría
+              </a>
+            </div>
           </div>
         </div>
       </section>
