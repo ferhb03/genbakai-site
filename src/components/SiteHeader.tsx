@@ -13,7 +13,7 @@ export default function SiteHeader() {
           />
 
           <div>
-            <div className="text-lg font-semibold tracking-tight text-slate-900 md:text-xl">
+            <div className="text-lg font-semibold tracking-tight text-slate-900 md:text-2xl">
               GENBA-KAI
             </div>
             <div className="text-xs text-slate-500 md:text-sm">
@@ -22,18 +22,18 @@ export default function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-semibold text-slate-900 md:mt-0 md:flex md:flex-wrap md:gap-6 md:text-sm">
+        <nav className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-semibold text-slate-900 md:mt-0 md:flex md:flex-wrap md:gap-4 md:text-base">
           <Link href="/diagnosticos" className="whitespace-nowrap hover:text-slate-700">
             DIAGNÓSTICOS
           </Link>
           <a href="/#formacion" className="whitespace-nowrap hover:text-slate-700">
             FORMACIÓN
           </a>
-          <a href="/#comunidad" className="whitespace-nowrap hover:text-slate-700">
-            COMUNIDAD
-          </a>
           <a href="/#consultoria" className="whitespace-nowrap hover:text-slate-700">
             CONSULTORÍA
+          </a>
+          <a href="/#comunidad" className="whitespace-nowrap hover:text-slate-700">
+            COMUNIDAD
           </a>
           <a href="/#sobre" className="whitespace-nowrap hover:text-slate-700">
             ACERCA DE FERNANDO
