@@ -272,6 +272,7 @@ export default function Home() {
       <section id="sobre" className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
                 <img
@@ -281,15 +282,17 @@ export default function Home() {
                 />
               </div>
             </div>
-
+            
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
                 Acerca de Fernando
               </p>
 
-              <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+              <h2 className="mt-3 mb-6 text-4xl font-semibold tracking-tight">
                 Fernando Benitez
               </h2>
+
+
 
               <p className="mt-4 text-lg leading-8 text-slate-600">
                 Experiencia real en operaciones industriales, estandarización y mejora
