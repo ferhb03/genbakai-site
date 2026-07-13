@@ -180,7 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="información" className="bg-slate-50 py-20">
+      <section id="formacion" className="bg-slate-50 py-20">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -222,7 +222,7 @@ export default function Home() {
          </div> 
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section id="consultoria" className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               Consultoría
@@ -284,7 +284,7 @@ export default function Home() {
 
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                Sobre Fernando
+                Acerca de Fernando
               </p>
 
               <h2 className="mt-3 text-4xl font-semibold tracking-tight">
