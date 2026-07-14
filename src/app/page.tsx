@@ -34,7 +34,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
 
       <section id="enfoque" className="bg-slate-50 pt-4 pb-10">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.2fr] md:items-center">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-8">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
               <img
                 src="/hero-industrial.png"
