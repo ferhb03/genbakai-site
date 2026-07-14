@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      <section id="enfoque" className="bg-slate-50 pt-4 pb-10">
+      <section id="enfoque" className="bg-slate-50 pt-5 pb-15">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="problema" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="problema" className="mx-auto max-w-6xl px-6 py-15">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             El problema
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="enfoque" className="bg-slate-50 py-20">
+      <section id="enfoque" className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 py-15">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Tres caminos para empezar
@@ -198,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="formacion" className="bg-slate-50 py-20">
+      <section id="formacion" className="bg-slate-50 py-15">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -240,7 +240,7 @@ export default function Home() {
          </div> 
       </section>
 
-      <section id="consultoria" className="mx-auto max-w-6xl px-6 py-20">
+      <section id="consultoria" className="mx-auto max-w-6xl px-6 py-15">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               Consultoría
@@ -298,7 +298,7 @@ export default function Home() {
           </div>
       </section>
 
-      <section id="sobre" className="bg-slate-50 py-20">
+      <section id="sobre" className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -361,7 +361,7 @@ export default function Home() {
         </div>
        </section>
 
-      <section id="comunidad" className="border-y border-slate-200 bg-white py-20">
+      <section id="comunidad" className="border-y border-slate-200 bg-white py-15">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Nuevos recursos
@@ -381,7 +381,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">

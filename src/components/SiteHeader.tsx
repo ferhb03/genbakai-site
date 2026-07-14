@@ -17,7 +17,7 @@ export default function SiteHeader() {
               GENBA-KAI
             </div>
             <div className="text-xs text-slate-500 md:text-sm">
-              Diagnósticos, formación y consultoría
+              Diagnósticos, consultoría y formación
             </div>
           </div>
         </Link>
@@ -26,11 +26,11 @@ export default function SiteHeader() {
           <Link href="/diagnosticos" className="whitespace-nowrap hover:text-slate-700">
             DIAGNÓSTICOS
           </Link>
-          <a href="/#formacion" className="whitespace-nowrap hover:text-slate-700">
-            FORMACIÓN
-          </a>
           <a href="/#consultoria" className="whitespace-nowrap hover:text-slate-700">
             CONSULTORÍA
+          </a>
+          <a href="/#formacion" className="whitespace-nowrap hover:text-slate-700">
+            FORMACIÓN
           </a>
           <a href="/#comunidad" className="whitespace-nowrap hover:text-slate-700">
             COMUNIDAD
