@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
     const paths = [
@@ -363,27 +364,20 @@ export default function Home() {
       <section id="comunidad" className="border-y border-slate-200 bg-white py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            Comunidad futura
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Un espacio para seguir profundizando.
-          </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Genba-kai buscará crecer hacia una comunidad de profesionales
-            interesados en estándar, liderazgo operativo y mejora continua con
-            criterio práctico.
+            Nuevos recursos
           </p>
 
-          <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
-            <input
-              type="email"
-              placeholder="Tu email"
-              className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none"
-            />
-            <button className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white">
-              Recibir novedades
-            </button>
-          </div>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+            Recibí herramientas prácticas de Genba-Kai
+          </h2>
+
+          <p className="mt-4 text-base leading-7 text-slate-600">
+            Suscribite para recibir nuevos diagnósticos, artículos, ebooks, cursos y
+            recursos sobre mejora operativa para PyMEs industriales.
+          </p>
+
+          <NewsletterForm />
+          
         </div>
       </section>
 
