@@ -16,6 +16,10 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
+    const firstName =
+      typeof body.firstName === "string"
+        ? body.firstName.trim()
+        : "";
     const email =
       typeof body.email === "string"
         ? body.email.trim().toLowerCase()
@@ -26,6 +30,13 @@ export async function POST(request: Request) {
     if (!email || !emailPattern.test(email)) {
       return NextResponse.json(
         { error: "Ingresá un correo electrónico válido." },
+        { status: 400 }
+      );
+    }
+
+    if (!firstName) {
+      return NextResponse.json(
+        { error: "Ingresá tu nombre." },
         { status: 400 }
       );
     }
@@ -46,6 +57,7 @@ export async function POST(request: Request) {
       .from("newsletter_subscribers")
       .insert({
         email,
+        first_name: firstName,
         source: "genbakai-home",
         status: "subscribed",
       });

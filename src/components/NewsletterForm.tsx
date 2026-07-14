@@ -6,6 +6,7 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
 
@@ -13,6 +14,7 @@ export default function NewsletterForm() {
     event.preventDefault();
 
     const normalizedEmail = email.trim().toLowerCase();
+    const normalizedFirstName = firstName.trim();
 
     if (!normalizedEmail) {
       setStatus("error");
@@ -30,7 +32,8 @@ export default function NewsletterForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: normalizedEmail,
+        email: normalizedEmail,
+        firstName: normalizedFirstName,
         }),
       });
 
@@ -70,10 +73,34 @@ export default function NewsletterForm() {
 
   return (
     <div className="mx-auto mt-8 max-w-xl">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-3 sm:flex-row"
-      >
+        <form
+            onSubmit={handleSubmit}
+            className="grid gap-3 sm:grid-cols-[0.8fr_1.2fr_auto]"
+        >
+
+        <label htmlFor="newsletter-name" className="sr-only">
+        Nombre
+        </label>
+
+        <input
+        id="newsletter-name"
+        type="text"
+        value={firstName}
+        onChange={(event) => {
+            setFirstName(event.target.value);
+
+            if (status !== "idle") {
+            setStatus("idle");
+            setMessage("");
+            }
+        }}
+        placeholder="Tu nombre"
+        autoComplete="given-name"
+        required
+        disabled={isLoading}
+        className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 disabled:cursor-not-allowed disabled:opacity-60"
+        />
+        
         <label htmlFor="newsletter-email" className="sr-only">
           Correo electrónico
         </label>
