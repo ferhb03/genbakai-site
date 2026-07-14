@@ -2,29 +2,29 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 
 export default function Home() {
-  const paths = [
-    {
-      title: "Evaluá el estado actual de tu operación",
-      description:
-        "Descubrí las principales oportunidades de mejora antes de comenzar cualquier implementación.",
-      button: "Ver diagnósticos",
-      href: "/diagnosticos",
-    },
-    {
-      title: "Implementación y acompañamiento",
-      description:
-        "Acompañamiento presencial y online para mejorar estabilidad operativa y desarrollar personas.",
-      button: "Cómo trabajamos",
-      href: "#consultoria",
-    },
-    {
-      title: "Formación",
-      description:
-        "Ebooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
-      button: "Próximamente",
-      href: "#",
-    },
-  ];
+    const paths = [
+      {
+        title: "Evaluá el estado actual de tu operación",
+        description:
+          "Descubrí las principales oportunidades de mejora antes de comenzar cualquier implementación.",
+        button: "Ver diagnósticos",
+        href: "/diagnosticos",
+      },
+      {
+        title: "Implementación y acompañamiento",
+        description:
+          "Acompañamiento presencial y online para mejorar estabilidad operativa y desarrollar personas.",
+        button: "Cómo trabajamos",
+        href: "#consultoria",
+      },
+      {
+        title: "Formación",
+        description:
+          "Ebooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
+        button: "Próximamente",
+        href: null,
+      },
+    ];
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -166,15 +166,18 @@ export default function Home() {
                 {item.description}
               </p>
 
-              {item.title === "Diagnósticos" ? (
+              {item.href ? (
                 <Link
-                  href="/diagnosticos"
+                  href={item.href}
                   className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium"
                 >
                   {item.button}
                 </Link>
               ) : (
-                <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
+                <button
+                  disabled
+                  className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium opacity-60 cursor-default"
+                >
                   {item.button}
                 </button>
               )}
