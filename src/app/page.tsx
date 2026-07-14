@@ -4,22 +4,25 @@ import SiteHeader from "@/components/SiteHeader";
 export default function Home() {
   const paths = [
     {
-      title: "Diagnósticos",
+      title: "Evaluá el estado actual de tu operación",
       description:
-        "Herramientas gratuitas para evaluar el estado actual de procesos y operaciones.",
+        "Descubrí las principales oportunidades de mejora antes de comenzar cualquier implementación.",
       button: "Ver diagnósticos",
+      href: "/diagnosticos",
+    },
+    {
+      title: "Implementación y acompañamiento",
+      description:
+        "Acompañamiento presencial y online para mejorar estabilidad operativa y desarrollar personas.",
+      button: "Cómo trabajamos",
+      href: "#consultoria",
     },
     {
       title: "Formación",
       description:
         "Ebooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
-      button: "Explorar formación",
-    },
-    {
-      title: "Consultoría",
-      description:
-        "Acompañamiento online y presencial para mejorar estabilidad operativa y desarrollar personas.",
-      button: "Conocer consultoría",
+      button: "Próximamente",
+      href: "#",
     },
   ];
 
@@ -34,11 +37,11 @@ export default function Home() {
             </p>
 
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-              Estandarización, gestión visual y mejora operativa para construir procesos más estables, simples y controlables
+              Construimos sistemas de producción para que las PyMEs industriales recuperen estabilidad y puedan crecer con mayor control.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-              Implementación en planta junto al equipo para reducir desperdicios, hacer visibles los problemas, mejorar la productividad y sostener una forma de trabajo más ordenada y controlada.
+              Trabajamos junto al equipo para transformar procesos desordenados en un sistema simple, visible y sostenible que pueda mantenerse en el tiempo.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -49,10 +52,10 @@ export default function Home() {
                 Explorar diagnósticos
               </a>
               <a
-                href="#enfoque"
+                href="/#consultoria"
                 className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800"
               >
-                Conocer el enfoque
+                Cómo trabajamos
               </a>
             </div>
           </div>
@@ -151,7 +154,7 @@ export default function Home() {
             Tres caminos para empezar
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Una plataforma para diagnosticar, aprender e implementar.
+            Tres formas de empezar a mejorar tu operación
           </h2>
         </div>
 
@@ -232,11 +235,18 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               Acompañamiento práctico para ayudar a empresas industriales
-              a construir procesos más estables, desarrollar personas y mejorar
-              resultados mediante un sistema de trabajo propio.
+              a construir sistemas de producción propios, desarrollar personas
+              y mejorar resultados de forma sostenible.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              ¿Queres saber como trabajamos? Descargá nuestro brochure y conocé nuestra propuesta de valor, metodología y sistema.
+              Conocé nuestra forma de trabajo y cómo acompañamos a las empresas
+              desde el diagnóstico inicial hasta la implementación y el desarrollo
+              de capacidades internas.
+            </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              El brochure presenta nuestra propuesta de valor, metodología de
+              implementación, etapas de trabajo y modalidades de acompañamiento para
+              PyMEs industriales.
             </p>
 
             <a
@@ -245,27 +255,31 @@ export default function Home() {
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
             >
-              DESCARGAR BROCHURE
+              DESCARGAR PROPUESTA COMPLETA
             </a>
 
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-xl font-semibold">Mentoría online</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                Sesiones remotas para analizar problemas, ordenar prioridades,
-                revisar procesos y definir próximos pasos.
-              </p>
-            </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
               <h3 className="text-xl font-semibold">Consultoría presencial</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Acompañamiento en planta para observar en Genba, detectar brechas,
-                estandarizar y trabajar sobre oportunidades reales.
+                Acompañamiento práctico para construir un sistema de producción propio,
+                desarrollar estándares, fortalecer a los equipos y transformar la mejora
+                en una forma de trabajo sostenible.
               </p>
             </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-semibold">Mentoría online</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Espacio de acompañamiento para dueños, gerentes y líderes que necesitan
+                resolver desafíos operativos, ordenar prioridades y tomar mejores decisiones
+                para avanzar en sus procesos de mejora.
+              </p>
+            </div>
+
           </div>
       </section>
 
@@ -282,7 +296,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            
+
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
                 Acerca de Fernando
