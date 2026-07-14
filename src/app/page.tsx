@@ -9,6 +9,7 @@ export default function Home() {
           "Descubrí las principales oportunidades de mejora antes de comenzar cualquier implementación.",
         button: "Ver diagnósticos",
         href: "/diagnosticos",
+        variant: "primary",
       },
       {
         title: "Implementación y acompañamiento",
@@ -16,6 +17,7 @@ export default function Home() {
           "Acompañamiento presencial y online para mejorar estabilidad operativa y desarrollar personas.",
         button: "Cómo trabajamos",
         href: "#consultoria",
+        variant: "secondary",
       },
       {
         title: "Formación",
@@ -23,6 +25,7 @@ export default function Home() {
           "Ebooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
         button: "Próximamente",
         href: null,
+        variant: "disabled",
       },
     ];
 
@@ -160,8 +163,12 @@ export default function Home() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {paths.map((item) => (
-            <div key={item.title} className="rounded-3xl border border-slate-200 p-6">
+            <div
+              key={item.title}
+              className="rounded-3xl border border-slate-200 p-6"
+            >
               <h3 className="text-xl font-semibold">{item.title}</h3>
+
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 {item.description}
               </p>
@@ -169,14 +176,18 @@ export default function Home() {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium"
+                  className={`mt-6 inline-flex rounded-2xl px-4 py-2 text-sm font-semibold transition-colors ${
+                    item.variant === "primary"
+                      ? "bg-slate-900 text-white hover:bg-slate-800"
+                      : "border border-slate-300 text-slate-900 hover:bg-slate-100"
+                  }`}
                 >
                   {item.button}
                 </Link>
               ) : (
                 <button
                   disabled
-                  className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium opacity-60 cursor-default"
+                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-500 opacity-60 cursor-default"
                 >
                   {item.button}
                 </button>
@@ -256,7 +267,7 @@ export default function Home() {
               href="/Brochure_Genba-Kai_2026.pdf"
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800 hover:bg-slate-100"
+              className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-white hover:bg-slate-800 bg-slate-900"
             >
               DESCARGAR PROPUESTA COMPLETA
             </a>
