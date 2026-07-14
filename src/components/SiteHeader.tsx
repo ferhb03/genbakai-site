@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function SiteHeader() {
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
+      <div className="mx-auto max-w-6xl px-4 pt-4 pb-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
         <Link href="/" className="flex items-center gap-3">
           <img
             src="/logo1.png"

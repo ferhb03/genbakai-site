@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      <section id="enfoque" className="bg-slate-50 py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
+      <section id="enfoque" className="bg-slate-50 pt-4 pb-10">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.2fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
