@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "3 diagnósticos Lean | Genba-Kai",
+  title: "Diagnósticos Lean | Genba-Kai",
   description:
     "Evaluá 5S, Trabajo Estandarizado y Madurez Lean antes de implementar mejoras.",
 
