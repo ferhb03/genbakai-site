@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Evaluá 5S, Trabajo Estandarizado y Madurez Lean antes de implementar mejoras.",
 
   openGraph: {
-    title: "3 diagnósticos gratuitos para evaluar tu operación",
+    title: "Descubrí oportunidades de mejora antes de invertir en cambios",
     description:
       "Checklist 5S, Trabajo Estandarizado y Madurez Lean para detectar brechas y ordenar prioridades.",
     url: "https://genbakai.com/diagnosticos",
