@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "3 diagnósticos gratuitos para evaluar tu operación",
+    title: "Descubrí oportunidades de mejora antes de invertir en cambios",
     description:
-      "Checklist 5S, Trabajo Estandarizado y Madurez Lean.",
+      "Tres diagnósticos gratuitos de 5S, Trabajo Estandarizado y Madurez Lean.",
     images: ["https://genbakai.com/og-diagnosticos.png"],
   },
 };
