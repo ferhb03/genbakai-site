@@ -43,7 +43,7 @@ export default function DiagnosticosPage() {
               onClick={() => track("click_diagnostico_5s")}
               className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
             >
-              Ir al checklist 5S
+              Ir al Checklist 5S
             </a>
             <p className="mt-3 text-xs text-slate-500">
               Diagnóstico online con resultado inmediato y recomendaciones prácticas.
