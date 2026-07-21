@@ -15,9 +15,9 @@ export default function DiagnosticosPage() {
             Herramientas para observar el estado actual antes de intervenir.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            Los diagnósticos de Genba-kai están diseñados para ayudar a
-            identificar brechas, ordenar prioridades y generar una primera base
-            de análisis antes de avanzar con formación o implementación.
+            Los diagnósticos de Genba-Kai ayudan a observar el estado real de
+            la operación, detectar brechas y ordenar prioridades antes de avanzar
+            con consultoría, implementación o formación.
           </p>
         </div>
       </section>
