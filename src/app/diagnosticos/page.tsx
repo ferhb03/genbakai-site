@@ -78,6 +78,33 @@ export default function DiagnosticosPage() {
           </div>
         </div>
 
+        <div className="rounded-3xl border border-slate-200 p-8">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">
+            Disponible ahora
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold">Madurez Lean</h2>
+          <p className="mt-4 text-base leading-7 text-slate-600">
+            Evaluación para conocer el nivel de desarrollo Lean de la empresa y
+            detectar las principales brechas para ordenar la operación, reducir
+            desperdicios y sostener mejoras.
+          </p>
+
+          <div className="mt-8">
+            <a
+              href="https://checklists.genbakai.com/lean-maturity"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => track("click_lean_maturity")}
+              className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+            >
+              Ir a Madurez Lean
+            </a>
+            <p className="mt-3 text-xs text-slate-500">
+              Diagnóstico de 21 preguntas con resultado general y análisis por dimensiones.
+            </p>
+          </div>
+        </div>
+
         <div className="rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-8">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">
             Próximamente
