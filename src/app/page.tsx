@@ -270,7 +270,7 @@ export default function Home() {
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-white hover:bg-slate-800 bg-slate-900"
             >
-              DESCARGAR PROPUESTA COMPLETA
+              BROCHURE - DESCARGAR PROPUESTA
             </a>
 
           </div>
