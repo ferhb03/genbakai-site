@@ -409,45 +409,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
-          <div>
-            <div className="text-lg font-semibold">GENBA-KAI</div>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Diagnósticos, formación y consultoría basados en principios del TPS.
-            </p>
-          </div>
-
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Navegación
-            </div>
-            <div className="mt-4 space-y-2 text-sm text-slate-600">
-              <div>Diagnósticos</div>
-              <div>Formación</div>
-              <div>Consultoría</div>
-              <div>Sobre Fernando</div>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Contacto
-            </div>
-            <div className="mt-4 space-y-2 text-sm text-slate-600">
-              <a
-                href="https://www.linkedin.com/in/fernando-horacio-benitez"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                LinkedIn
-              </a>
-              <div>fernando.benitez@genbakai.com</div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
