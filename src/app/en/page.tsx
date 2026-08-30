@@ -50,7 +50,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                href="/diagnosticos"
+                href="/en/diagnostics"
                 className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
                 >
                 Explore diagnostics
@@ -214,7 +214,69 @@ export default function Home() {
         </div>
         </section>
 
-        <section id="formacion" className="bg-slate-50 py-15">
+        <section id="consultoria" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+        <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+                CONSULTING
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+                Practical implementation to build stronger and more sustainable operations.
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-slate-600">
+                Practical consulting for industrial companies seeking to build their own
+                production systems, strengthen operational standards, develop people and
+                improve performance in a sustainable way.
+            </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="bg-white rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                On-site implementation
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Practical implementation focused on building a production system adapted
+                to the operation, developing standards, strengthening teams and turning
+                improvement into a sustainable way of working.
+                </p>
+
+                <a
+                href="/Brochure_Genba-Kai_2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+                >
+                VIEW CONSULTING BROCHURE (SPANISH)
+                </a>
+            </div>
+
+            <div className="bg-white rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                Mentoring for leaders
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Online mentoring for owners, managers and operational leaders who need
+                to analyze challenges, establish priorities and make better decisions
+                about their operations.
+                </p>
+
+                <a
+                href="mailto:fernando.benitez@genbakai.com"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+                >
+                Get in touch
+                </a>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="formacion" className="scroll-mt-28 py-15">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -262,69 +324,7 @@ export default function Home() {
         </div>
         </section>
 
-        <section id="consultoria" className="py-15">
-        <div className="mx-auto max-w-6xl px-6">
-            <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                CONSULTING
-            </p>
-
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Practical implementation to build stronger and more sustainable operations.
-            </h2>
-
-            <p className="mt-4 text-base leading-7 text-slate-600">
-                Practical consulting for industrial companies seeking to build their own
-                production systems, strengthen operational standards, develop people and
-                improve performance in a sustainable way.
-            </p>
-            </div>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 p-6">
-                <h3 className="text-xl font-semibold">
-                On-site implementation
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                Practical implementation focused on building a production system adapted
-                to the operation, developing standards, strengthening teams and turning
-                improvement into a sustainable way of working.
-                </p>
-
-                <a
-                href="/Brochure_Genba-Kai_2026.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
-                >
-                View consulting brochure
-                </a>
-            </div>
-
-            <div className="rounded-3xl border border-slate-200 p-6">
-                <h3 className="text-xl font-semibold">
-                Mentoring for leaders
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                Online mentoring for owners, managers and operational leaders who need
-                to analyze challenges, establish priorities and make better decisions
-                about their operations.
-                </p>
-
-                <a
-                href="mailto:fernando.benitez@genbakai.com"
-                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
-                >
-                Get in touch
-                </a>
-            </div>
-            </div>
-        </div>
-        </section>
-
-        <section id="sobre" className="bg-slate-50 py-15">
+        <section id="sobre" className="bg-slate-50 py-15 scroll-mt-28 py-15">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[0.85fr_1.15fr] md:items-center">
             <div>
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
@@ -376,35 +376,22 @@ export default function Home() {
         
         </section>
 
-        <section id="comunidad" className="py-15">
-        <div className="mx-auto max-w-6xl px-6">
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 md:p-10">
-            <div className="grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-center">
-                <div>
-                <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                    NEW RESOURCES
-                </p>
+        <section id="comunidad" className="border-y border-slate-200 bg-white scroll-mt-28 py-15">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+            NEW RESOURCES
+            </p>
 
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                    Practical Genba-Kai resources delivered directly to your inbox.
-                </h2>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+            Practical Genba-Kai resources directly to your inbox.
+            </h2>
 
-                <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-                    Subscribe to receive new diagnostics, articles, ebooks, courses and
-                    resources focused on operational improvement for industrial SMEs.
-                </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+            Subscribe to receive new diagnostics, articles, ebooks, courses and
+            resources focused on operational improvement for industrial SMEs.
+            </p>
 
-                <p className="mt-3 text-sm leading-6 text-slate-500">
-                    Only Genba-Kai related updates will be sent. Unsubscribing will be
-                    possible at any time.
-                </p>
-                </div>
-
-                <div>
-                <NewsletterForm />
-                </div>
-            </div>
-            </div>
+            <NewsletterForm language="en" />
         </div>
         </section>
 
@@ -421,7 +408,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <a
-                href="/diagnosticos"
+                href="/en/diagnostics"
                 className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
                 >
                 Explore diagnostics

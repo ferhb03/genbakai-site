@@ -3,12 +3,56 @@
 import { FormEvent, useState } from "react";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
+type Language = "es" | "en";
 
-export default function NewsletterForm() {
+type NewsletterFormProps = {
+  language?: Language;
+};
+
+export default function NewsletterForm({
+  language = "es",
+}: NewsletterFormProps) {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
+
+  const content =
+    language === "en"
+      ? {
+          nameLabel: "Name",
+          namePlaceholder: "Your name",
+          emailLabel: "Email address",
+          emailPlaceholder: "Your email",
+          loading: "Subscribing...",
+          submit: "Subscribe",
+          emailRequired: "Enter your email address.",
+          genericError: "The subscription could not be completed.",
+          alreadySubscribed:
+            "This email is already registered to receive Genba-Kai updates.",
+          success:
+            "Done. New Genba-Kai resources and updates will be sent to this email.",
+          unexpectedError: "An error occurred. Please try again.",
+          privacy:
+            "Only Genba-Kai related updates will be sent. You can unsubscribe at any time.",
+        }
+      : {
+          nameLabel: "Nombre",
+          namePlaceholder: "Tu nombre",
+          emailLabel: "Correo electrónico",
+          emailPlaceholder: "Tu email",
+          loading: "Registrando...",
+          submit: "Suscribirme",
+          emailRequired: "Ingresá tu correo electrónico.",
+          genericError: "No pudimos registrar la suscripción.",
+          alreadySubscribed:
+            "Este correo ya estaba registrado para recibir novedades.",
+          success:
+            "Listo. Te avisaremos cuando publiquemos nuevos recursos de Genba-Kai.",
+          unexpectedError: "Ocurrió un error. Intentá nuevamente.",
+          privacy:
+            "Solo enviaremos novedades relacionadas con Genba-Kai. Podrás darte de baja cuando quieras.",
+        };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,7 +62,7 @@ export default function NewsletterForm() {
 
     if (!normalizedEmail) {
       setStatus("error");
-      setMessage("Ingresá tu correo electrónico.");
+      setMessage(content.emailRequired);
       return;
     }
 
@@ -32,8 +76,8 @@ export default function NewsletterForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-        email: normalizedEmail,
-        firstName: normalizedFirstName,
+          email: normalizedEmail,
+          firstName: normalizedFirstName,
         }),
       });
 
@@ -43,28 +87,25 @@ export default function NewsletterForm() {
         throw new Error(
           typeof data.error === "string"
             ? data.error
-            : "No pudimos registrar la suscripción."
+            : content.genericError
         );
       }
 
       setStatus("success");
 
       if (data.alreadySubscribed) {
-        setMessage("Este correo ya estaba registrado para recibir novedades.");
+        setMessage(content.alreadySubscribed);
       } else {
-        setMessage(
-          "Listo. Te avisaremos cuando publiquemos nuevos recursos de Genba-Kai."
-        );
+        setMessage(content.success);
         setEmail("");
+        setFirstName("");
       }
     } catch (error) {
       console.error("Newsletter subscription error:", error);
 
       setStatus("error");
       setMessage(
-        error instanceof Error
-          ? error.message
-          : "Ocurrió un error. Intentá nuevamente."
+        error instanceof Error ? error.message : content.unexpectedError
       );
     }
   };
@@ -73,36 +114,35 @@ export default function NewsletterForm() {
 
   return (
     <div className="mx-auto mt-8 max-w-xl">
-        <form
-            onSubmit={handleSubmit}
-            className="grid gap-3 sm:grid-cols-[0.8fr_1.2fr_auto]"
-        >
-
+      <form
+        onSubmit={handleSubmit}
+        className="grid gap-3 sm:grid-cols-[0.8fr_1.2fr_auto]"
+      >
         <label htmlFor="newsletter-name" className="sr-only">
-        Nombre
+          {content.nameLabel}
         </label>
 
         <input
-        id="newsletter-name"
-        type="text"
-        value={firstName}
-        onChange={(event) => {
+          id="newsletter-name"
+          type="text"
+          value={firstName}
+          onChange={(event) => {
             setFirstName(event.target.value);
 
             if (status !== "idle") {
-            setStatus("idle");
-            setMessage("");
+              setStatus("idle");
+              setMessage("");
             }
-        }}
-        placeholder="Tu nombre"
-        autoComplete="given-name"
-        required
-        disabled={isLoading}
-        className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 disabled:cursor-not-allowed disabled:opacity-60"
+          }}
+          placeholder={content.namePlaceholder}
+          autoComplete="given-name"
+          required
+          disabled={isLoading}
+          className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 disabled:cursor-not-allowed disabled:opacity-60"
         />
-        
+
         <label htmlFor="newsletter-email" className="sr-only">
-          Correo electrónico
+          {content.emailLabel}
         </label>
 
         <input
@@ -117,7 +157,7 @@ export default function NewsletterForm() {
               setMessage("");
             }
           }}
-          placeholder="Tu email"
+          placeholder={content.emailPlaceholder}
           autoComplete="email"
           required
           disabled={isLoading}
@@ -129,7 +169,7 @@ export default function NewsletterForm() {
           disabled={isLoading}
           className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {isLoading ? "Registrando..." : "Suscribirme"}
+          {isLoading ? content.loading : content.submit}
         </button>
       </form>
 
@@ -148,8 +188,7 @@ export default function NewsletterForm() {
       )}
 
       <p className="mt-3 text-xs leading-5 text-slate-500">
-        Solo enviaremos novedades relacionadas con Genba-Kai. Podrás darte de
-        baja cuando quieras.
+        {content.privacy}
       </p>
     </div>
   );

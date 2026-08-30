@@ -41,7 +41,7 @@ export default function Home() {
             </p>
 
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-              Construimos sistemas de producción para que las PyMEs industriales recuperen estabilidad y puedan crecer con mayor control.
+              Sistemas de producción para que las PyMEs industriales recuperen estabilidad y puedan crecer con mayor control.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="enfoque" className="bg-slate-50 py-15">
+      <section id="enfoque" className="bg-slate-50 py-15 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -198,7 +198,79 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="formacion" className="bg-slate-50 py-15">
+        <section id="consultoria" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+        <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+                Consultoría
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+                Acompañamiento para transformar criterio en implementación.
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Acompañamiento práctico para ayudar a empresas industriales
+              a construir sistemas de producción propios, desarrollar personas
+              y mejorar resultados de forma sostenible.
+            </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Conocé nuestra forma de trabajo y cómo acompañamos a las empresas
+              desde el diagnóstico inicial hasta la implementación y el desarrollo
+              de capacidades internas.
+            </p>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              El brochure presenta nuestra propuesta de valor, metodología de
+              implementación, etapas de trabajo y modalidades de acompañamiento para
+              PyMEs industriales.
+            </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                Consultoría presencial
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Acompañamiento práctico para ayudar a empresas industriales
+                a construir sistemas de producción propios, desarrollar personas
+                y mejorar resultados de forma sostenible.
+                </p>
+
+                <a
+                href="/Brochure_Genba-Kai_2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-white hover:bg-slate-800 bg-slate-900"
+                >
+                VER BROCHURE → DESCARGAR PROPUESTA
+                </a>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                Mentoría para líderes
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Espacio de acompañamiento para dueños, gerentes y líderes que necesitan
+                resolver desafíos operativos, ordenar prioridades y tomar mejores decisiones
+                para avanzar en sus procesos de mejora.
+                </p>
+
+                <a
+                href="mailto:fernando.benitez@genbakai.com"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+                >
+                Contactar
+                </a>
+            </div>
+            </div>
+        </div>
+        </section>
+
+      <section id="formacion" className="scroll-mt-28 py-15">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -240,65 +312,7 @@ export default function Home() {
          </div> 
       </section>
 
-      <section id="consultoria" className="mx-auto max-w-6xl px-6 py-15">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              Consultoría
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Acompañamiento para transformar criterio en implementación.
-            </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              Acompañamiento práctico para ayudar a empresas industriales
-              a construir sistemas de producción propios, desarrollar personas
-              y mejorar resultados de forma sostenible.
-            </p>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              Conocé nuestra forma de trabajo y cómo acompañamos a las empresas
-              desde el diagnóstico inicial hasta la implementación y el desarrollo
-              de capacidades internas.
-            </p>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              El brochure presenta nuestra propuesta de valor, metodología de
-              implementación, etapas de trabajo y modalidades de acompañamiento para
-              PyMEs industriales.
-            </p>
-
-            <a
-              href="/Brochure_Genba-Kai_2026.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-white hover:bg-slate-800 bg-slate-900"
-            >
-              BROCHURE - DESCARGAR PROPUESTA
-            </a>
-
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-xl font-semibold">Consultoría presencial</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                Acompañamiento práctico para construir un sistema de producción propio,
-                desarrollar estándares, fortalecer a los equipos y transformar la mejora
-                en una forma de trabajo sostenible.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-xl font-semibold">Mentoría online</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                Espacio de acompañamiento para dueños, gerentes y líderes que necesitan
-                resolver desafíos operativos, ordenar prioridades y tomar mejores decisiones
-                para avanzar en sus procesos de mejora.
-              </p>
-            </div>
-
-          </div>
-      </section>
-
-      <section id="sobre" className="bg-slate-50 py-15">
+      <section id="sobre" className="bg-slate-50 py-15 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -361,7 +375,7 @@ export default function Home() {
         </div>
        </section>
 
-      <section id="comunidad" className="border-y border-slate-200 bg-white py-15">
+      <section id="comunidad" className="border-y border-slate-200 scroll-mt-28 py-15">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Nuevos recursos
@@ -381,7 +395,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-15">
+      <section className="bg-slate-50 py-15 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
