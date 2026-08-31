@@ -111,6 +111,7 @@ export default function SiteHeader() {
         border-b border-slate-200
         bg-white
         transition-transform duration-300 ease-out
+        will-change-transform
         ${
           isVisible
             ? "translate-y-0"
