@@ -27,7 +27,7 @@ export default function SiteHeader() {
       };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="border-b border-slate-200 bg-white md:sticky md:top-0 md:z-50">
       <div className="mx-auto max-w-6xl px-4 pt-4 pb-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
         <Link
           href={isEnglish ? "/en" : "/"}

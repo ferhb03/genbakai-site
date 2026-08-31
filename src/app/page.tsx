@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="enfoque" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+      <section id="enfoque" className="bg-slate-50 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -198,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-        <section id="consultoria" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+        <section id="consultoria" className="bg-slate-50 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -312,7 +312,7 @@ export default function Home() {
          </div> 
       </section>
 
-      <section id="sobre" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+      <section id="sobre" className="bg-slate-50 py-15 scroll-mt-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -395,7 +395,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-15 scroll-mt-28 py-15">
+      <section className="bg-slate-50 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
