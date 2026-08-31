@@ -245,12 +245,12 @@ export default function Home() {
                 </p>
 
                 <a
-                href="/Brochure_Genba-Kai_2026.pdf"
+                href="/Brochure_Genba-Kai_2026_en.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
                 >
-                VIEW CONSULTING BROCHURE (SPANISH)
+                VIEW CONSULTING BROCHURE
                 </a>
             </div>
 
