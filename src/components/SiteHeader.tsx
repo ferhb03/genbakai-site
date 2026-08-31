@@ -13,6 +13,7 @@ export default function SiteHeader() {
 
   const lastScrollY = useRef(0);
   const accumulatedScroll = useRef(0);
+  const isNavigating = useRef(false);
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
@@ -20,6 +21,12 @@ export default function SiteHeader() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const difference = currentScrollY - lastScrollY.current;
+      
+      // Ignorar el scroll generado al navegar desde el header
+        if (isNavigating.current) {
+          lastScrollY.current = currentScrollY;
+          return;
+        }
 
       // Siempre visible cerca del inicio de la página
       if (currentScrollY < 40) {
