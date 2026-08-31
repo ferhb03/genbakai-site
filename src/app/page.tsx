@@ -286,7 +286,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
             <div className="rounded-3xl border border-slate-200 p-6">
               <h3 className="text-xl font-semibold">Ebook</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
