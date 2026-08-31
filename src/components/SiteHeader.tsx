@@ -40,7 +40,7 @@ export default function SiteHeader() {
       accumulatedScroll.current += difference;
 
       // Tolerancia: no reaccionar a pequeños movimientos del dedo
-      const threshold = 12;
+      const threshold = 20;
 
       if (accumulatedScroll.current > threshold) {
         // Scroll hacia abajo
