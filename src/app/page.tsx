@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      <section id="enfoque" className="bg-slate-50 pt-5 pb-15">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+      <section className="bg-slate-50 py-15">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
@@ -226,7 +226,7 @@ export default function Home() {
             </p>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
             <div className="rounded-3xl border border-slate-200 p-6">
                 <h3 className="text-xl font-semibold">
                 Consultoría presencial
