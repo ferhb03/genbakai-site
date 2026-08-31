@@ -51,13 +51,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/diagnosticos"
-                className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
               >
                 Explorar diagnósticos
               </a>
               <a
                 href="/#consultoria"
-                className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800"
+                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-800"
               >
                 Cómo trabajamos
               </a>
@@ -177,7 +177,7 @@ export default function Home() {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className={`mt-6 inline-flex rounded-2xl px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`mt-6 inline-flex rounded-2xl px-4 py-4 text-sm font-semibold transition-colors ${
                     item.variant === "primary"
                       ? "bg-slate-900 text-white hover:bg-slate-800"
                       : "border border-slate-300 text-slate-900 hover:bg-slate-100"
@@ -408,13 +408,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
                 href="/diagnosticos"
-                className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
               >
                 Explorar diagnósticos
               </a>
               <a
                 href="#consultoria"
-                className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-normal text-slate-800"
+                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800"
               >
                 Ver consultoría
               </a>

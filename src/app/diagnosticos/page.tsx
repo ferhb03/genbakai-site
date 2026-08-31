@@ -41,7 +41,7 @@ export default function DiagnosticosPage() {
               target="_blank"
               rel="noreferrer"
               onClick={() => track("click_diagnostico_5s")}
-              className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+              className="inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
             >
               Ir al Checklist 5S
             </a>
@@ -68,7 +68,7 @@ export default function DiagnosticosPage() {
               target="_blank"
               rel="noreferrer"
               onClick={() => track("click_standard_work")}
-              className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+              className="inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
             >
               Ir a Trabajo Estandarizado
             </a>
@@ -95,7 +95,7 @@ export default function DiagnosticosPage() {
               target="_blank"
               rel="noreferrer"
               onClick={() => track("click_lean_maturity")}
-              className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
+              className="inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
             >
               Ir a Madurez Lean
             </a>
@@ -121,7 +121,7 @@ export default function DiagnosticosPage() {
         <div className="mx-auto max-w-6xl px-6 pb-20">
         <Link
           href="/"
-          className="inline-flex rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100"
+          className="inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-700 hover:bg-slate-100"
         >
           ← VOLVER AL INICIO
         </Link>
