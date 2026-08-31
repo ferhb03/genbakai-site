@@ -21,7 +21,7 @@ export default function SiteHeader() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const difference = currentScrollY - lastScrollY.current;
-      
+
       // Ignorar el scroll generado al navegar desde el header
         if (isNavigating.current) {
           lastScrollY.current = currentScrollY;
@@ -88,6 +88,21 @@ export default function SiteHeader() {
         resources: "RECURSOS",
         about: "ACERCA DE FERNANDO",
       };
+
+  const handleNavClick = () => {
+    // Solo aplicar este comportamiento en móvil
+    if (window.innerWidth >= 768) return;
+
+    isNavigating.current = true;
+    setIsVisible(false);
+    accumulatedScroll.current = 0;
+
+    // Mantener bloqueada la detección mientras ocurre el scroll
+    window.setTimeout(() => {
+      isNavigating.current = false;
+      lastScrollY.current = window.scrollY;
+    }, 1000);
+  };
 
   return (
     <header
@@ -181,6 +196,7 @@ export default function SiteHeader() {
 
             <a
               href={isEnglish ? "/en#consultoria" : "/#consultoria"}
+              onClick={handleNavClick}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.consulting}
@@ -188,6 +204,7 @@ export default function SiteHeader() {
 
             <a
               href={isEnglish ? "/en#formacion" : "/#formacion"}
+              onClick={handleNavClick}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.training}
@@ -195,6 +212,7 @@ export default function SiteHeader() {
 
             <a
               href={isEnglish ? "/en#comunidad" : "/#comunidad"}
+              onClick={handleNavClick}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.resources}
@@ -202,6 +220,7 @@ export default function SiteHeader() {
 
             <a
               href={isEnglish ? "/en#sobre" : "/#sobre"}
+              onClick={handleNavClick}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.about}
