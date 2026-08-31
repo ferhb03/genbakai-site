@@ -2,11 +2,67 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 
 export default function SiteHeader() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
+
+  const [isVisible, setIsVisible] = useState(true);
+
+  const lastScrollY = useRef(0);
+  const accumulatedScroll = useRef(0);
+
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const difference = currentScrollY - lastScrollY.current;
+
+      // Siempre visible cerca del inicio de la página
+      if (currentScrollY < 40) {
+        setIsVisible(true);
+        accumulatedScroll.current = 0;
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Si cambia la dirección, reinicia la acumulación
+      if (
+        (difference > 0 && accumulatedScroll.current < 0) ||
+        (difference < 0 && accumulatedScroll.current > 0)
+      ) {
+        accumulatedScroll.current = 0;
+      }
+
+      accumulatedScroll.current += difference;
+
+      // Tolerancia: no reaccionar a pequeños movimientos del dedo
+      const threshold = 12;
+
+      if (accumulatedScroll.current > threshold) {
+        // Scroll hacia abajo
+        setIsVisible(false);
+        accumulatedScroll.current = 0;
+      }
+
+      if (accumulatedScroll.current < -threshold) {
+        // Scroll hacia arriba
+        setIsVisible(true);
+        accumulatedScroll.current = 0;
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const content = isEnglish
     ? {
@@ -14,7 +70,7 @@ export default function SiteHeader() {
         diagnostics: "DIAGNOSTICS",
         consulting: "CONSULTING",
         training: "TRAINING",
-        community: "RESOURCES",
+        resources: "RESOURCES",
         about: "ABOUT FERNANDO",
       }
     : {
@@ -22,12 +78,25 @@ export default function SiteHeader() {
         diagnostics: "DIAGNÓSTICOS",
         consulting: "CONSULTORÍA",
         training: "FORMACIÓN",
-        community: "COMUNIDAD",
+        resources: "RECURSOS",
         about: "ACERCA DE FERNANDO",
       };
 
   return (
-    <header className="border-b border-slate-200 bg-white md:sticky md:top-0 md:z-50">
+    <header
+      className={`
+        sticky top-0 z-50
+        border-b border-slate-200
+        bg-white
+        transition-transform duration-300 ease-out
+        ${
+          isVisible
+            ? "translate-y-0"
+            : "-translate-y-full"
+        }
+        md:translate-y-0
+      `}
+    >
       <div className="mx-auto max-w-6xl px-4 pt-4 pb-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
         <Link
           href={isEnglish ? "/en" : "/"}
@@ -118,19 +187,18 @@ export default function SiteHeader() {
             </a>
 
             <a
+              href={isEnglish ? "/en#comunidad" : "/#comunidad"}
+              className="whitespace-nowrap hover:text-slate-700"
+            >
+              {content.resources}
+            </a>
+
+            <a
               href={isEnglish ? "/en#sobre" : "/#sobre"}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.about}
             </a>
-
-            <a
-              href={isEnglish ? "/en#comunidad" : "/#comunidad"}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
-              {content.community}
-            </a>
-
           </nav>
         </div>
       </div>
