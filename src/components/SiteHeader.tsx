@@ -189,6 +189,7 @@ export default function SiteHeader() {
           <nav className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-semibold text-slate-900 md:flex md:flex-wrap md:gap-4 md:text-base">
             <Link
               href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
+              onClick={handleNavClick}
               className="whitespace-nowrap hover:text-slate-700"
             >
               {content.diagnostics}
