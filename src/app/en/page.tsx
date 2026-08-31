@@ -41,11 +41,11 @@ export default function Home() {
             </p>
 
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-            Production systems designed to help industrial SMEs regain stability and grow with greater control.
+            Helping industrial SMEs build production systems that restore stability and enable controlled growth.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            A practical approach that transforms disorganized processes into a simple, visible and sustainable operating system that can be maintained over time.
+            A practical approach that transforms disorganized processes into a simple, visible and sustainable production system.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -95,7 +95,7 @@ export default function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-6 text-slate-600">
-                Applying techniques without developing practical judgment often leads to superficial improvements.
+                Applying techniques without developing problem-solving capability often leads to superficial improvements.
             </p>
             </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-6 text-slate-600">
-                Production systems improve when people understand, apply and continuously develop the standard.
+                Sustainable improvement begins when people understand, follow and improve standards.
             </p>
             </div>
         </div>
@@ -136,7 +136,7 @@ export default function Home() {
             <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">
-                Understand the standard
+                Establish and understand the standard
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -150,7 +150,7 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                The actual operating condition is the starting point for diagnosis and decision-making.
+                The actual condition of the operation is the starting point for diagnosis and decision-making.
                 </p>
             </div>
 
@@ -227,8 +227,8 @@ export default function Home() {
 
             <p className="mt-4 text-base leading-7 text-slate-600">
                 Practical consulting for industrial companies seeking to build their own
-                production systems, strengthen operational standards, develop people and
-                improve performance in a sustainable way.
+                production systems, strengthen operational standards, making abnormalities visible, 
+                develop people and improve performance in a sustainable way.
             </p>
             </div>
 
@@ -240,8 +240,8 @@ export default function Home() {
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
                 Practical implementation focused on building a production system adapted
-                to the operation, developing standards, strengthening teams and turning
-                improvement into a sustainable way of working.
+                to the operation, developing standards, strengthening
+                teams and turning improvement into a sustainable way of working.
                 </p>
 
                 <a
@@ -288,8 +288,8 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-                Practical resources to understand how to design, implement and sustain
-                production systems based on Lean and Toyota Production System principles,
+                Practical resources for designing, implementing and sustaining
+                production systems grounded in Lean thinking and TPS principles,
                 adapted to the reality of industrial SMEs.
             </p>
             </div>
