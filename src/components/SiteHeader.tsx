@@ -18,15 +18,30 @@ export default function SiteHeader() {
   useEffect(() => {
     lastScrollY.current = window.scrollY;
 
+    const handleHideHeader = () => {
+      if (window.innerWidth >= 768) return;
+
+      isNavigating.current = true;
+      setIsVisible(false);
+      accumulatedScroll.current = 0;
+
+      window.setTimeout(() => {
+        isNavigating.current = false;
+        lastScrollY.current = window.scrollY;
+      }, 1000);
+    };
+
+    window.addEventListener("genbakai:hide-header", handleHideHeader);
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const difference = currentScrollY - lastScrollY.current;
 
       // Ignorar el scroll generado al navegar desde el header
-        if (isNavigating.current) {
-          lastScrollY.current = currentScrollY;
-          return;
-        }
+      if (isNavigating.current) {
+        lastScrollY.current = currentScrollY;
+        return;
+      }
 
       // Siempre visible cerca del inicio de la página
       if (currentScrollY < 40) {
@@ -68,6 +83,7 @@ export default function SiteHeader() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("genbakai:hide-header", handleHideHeader);
     };
   }, []);
 

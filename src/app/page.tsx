@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      <section className="bg-slate-50 py-15">
+      <section id="top" className="bg-slate-50 py-15">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
