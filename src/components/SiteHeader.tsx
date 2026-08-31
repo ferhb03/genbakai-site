@@ -34,7 +34,14 @@ export default function SiteHeader() {
     window.addEventListener("genbakai:hide-header", handleHideHeader);
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const maxScrollY =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const currentScrollY = Math.min(
+        Math.max(window.scrollY, 0),
+        Math.max(maxScrollY, 0)
+      );
+
       const difference = currentScrollY - lastScrollY.current;
 
       // Ignorar el scroll generado al navegar desde el header

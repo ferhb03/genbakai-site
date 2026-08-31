@@ -54,7 +54,6 @@ export default function SiteFooter() {
           <div>
             <Link
               href={isEnglish ? "/en#top" : "/#top"}
-              onClick={handleFooterNavClick}
               className="inline-block"
             >
               <div className="text-lg font-semibold tracking-tight text-slate-900">
