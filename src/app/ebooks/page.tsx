@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EbookLeadForm from "@/components/EbookLeadForm";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const ebooks = [
   {
@@ -7,9 +8,9 @@ const ebooks = [
     eyebrow: "Toyota Production System",
     title: "De las Herramientas al Sistema",
     subtitle:
-      "Principios del TPS para mejorar procesos, operaciones y organizaciones.",
+      "Por qué aplicar herramientas Lean de forma aislada no alcanza para transformar una operación.",
     description:
-      "Una introducción práctica al Toyota Production System entendido como sistema, conectando estabilidad, trabajo estandarizado, flujo, calidad, resolución de problemas y desarrollo de personas.",
+      "Una guía para comprender cómo los principios del Toyota Production System se conectan entre sí —estabilidad, trabajo estandarizado, flujo, calidad, resolución de problemas y desarrollo de personas— y cómo construir un sistema de trabajo propio, coherente y sostenible.",
     details: "50 páginas · PDF · Español",
   },
 ];
@@ -17,6 +18,7 @@ const ebooks = [
 export default function EbooksPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
+      <ScrollToTop />
       <section className="border-b border-slate-200 bg-slate-50 py-10">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">

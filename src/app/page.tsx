@@ -57,7 +57,7 @@ export default function Home() {
               </a>
               <a
                 href="/#consultoria"
-                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-800"
+                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800"
               >
                 Cómo trabajamos
               </a>
@@ -188,7 +188,7 @@ export default function Home() {
               ) : (
                 <button
                   disabled
-                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-500 opacity-60 cursor-default"
+                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-500 opacity-60 cursor-default"
                 >
                   {item.button}
                 </button>
@@ -244,7 +244,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-white hover:bg-slate-800 bg-slate-900"
                 >
-                VER BROCHURE → DESCARGAR PROPUESTA
+                DESCARGAR BROCHURE
                 </a>
             </div>
 
@@ -295,7 +295,7 @@ export default function Home() {
               </p>
               <Link
                 href="/ebooks"
-                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-800 transition-colors hover:bg-slate-100"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 bg-white px-4 py-4 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:border-slate-400 hover:bg-slate-100"
               >
                 Ver ebooks
               </Link>
@@ -307,7 +307,11 @@ export default function Home() {
                 Programas estructurados para profundizar en principios TPS,
                 estabilidad operativa y desarrollo de personas.
               </p>
-              <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
+              <button
+                type="button"
+                disabled
+                className="mt-6 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-500 opacity-60"
+              >
                 Próximamente
               </button>
             </div>
@@ -369,7 +373,7 @@ export default function Home() {
               </div>
 
               <a href="/#consultoria"
-                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-normal text-slate-800 hover:bg-slate-100"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800 hover:bg-slate-100"
               >
                 Ver consultoría
               </a>
