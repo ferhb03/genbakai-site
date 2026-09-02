@@ -288,14 +288,17 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
             <div className="rounded-3xl border border-slate-200 p-6">
-              <h3 className="text-xl font-semibold">Ebook</h3>
+              <h3 className="text-xl font-semibold">Ebooks</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 Material conceptual y práctico para entender los fundamentos del
                 sistema y aplicarlos en la realidad operativa.
               </p>
-              <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium">
-                Próximamente
-              </button>
+              <Link
+                href="/ebooks"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-800 transition-colors hover:bg-slate-100"
+              >
+                Ver ebooks
+              </Link>
             </div>
 
             <div className="rounded-3xl border border-slate-200 p-6">

@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    "/api/ebook-lead": ["./private-assets/ebooks/*.pdf"],
+  },
 };
 
 export default nextConfig;
