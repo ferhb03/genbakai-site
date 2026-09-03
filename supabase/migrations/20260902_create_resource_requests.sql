@@ -15,4 +15,4 @@ create table if not exists public.resource_requests (
 alter table public.resource_requests enable row level security;
 
 comment on table public.resource_requests is
-  'Solicitudes de ebooks y otros recursos capturadas desde genbakai.com.';
+  'Solicitudes de eBooks y otros recursos capturadas desde genbakai.com.';

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://genbakai.com/ebooks",
   },
   openGraph: {
-    title: "Ebooks y manuales prácticos",
+    title: "eBooks y manuales prácticos",
     description:
       "Recursos para comprender, aplicar y mejorar con principios del Toyota Production System.",
     url: "https://genbakai.com/ebooks",
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
         url: "https://genbakai.com/og-ebooks.png",
         width: 1200,
         height: 630,
-        alt: "Ebooks y manuales prácticos de Genba-Kai",
+        alt: "eBooks y manuales prácticos de Genba-Kai",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ebooks y manuales prácticos",
+    title: "eBooks y manuales prácticos",
     description:
       "Recursos para comprender, aplicar y mejorar con principios del Toyota Production System.",
     images: ["https://genbakai.com/og-ebooks.png"],
@@ -59,7 +59,7 @@ export default function EbooksPage() {
             Recursos Genba-Kai
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Ebooks y manuales prácticos.
+            eBooks y manuales prácticos.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Materiales desarrollados para comprender principios del Toyota

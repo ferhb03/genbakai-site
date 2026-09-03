@@ -23,7 +23,7 @@ export default function Home() {
       {
         title: "Formación",
         description:
-          "Ebooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
+          "eBooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
         button: "Próximamente",
         href: null,
         variant: "disabled",
@@ -297,7 +297,7 @@ export default function Home() {
                 href="/ebooks"
                 className="mt-6 inline-flex rounded-2xl border border-slate-300 bg-white px-4 py-4 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:border-slate-400 hover:bg-slate-100"
               >
-                Ver ebooks
+                Ver eBooks
               </Link>
             </div>
 

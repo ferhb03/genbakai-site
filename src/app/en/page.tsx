@@ -23,7 +23,7 @@ export default function Home() {
     {
         title: "Training",
         description:
-        "Ebooks, courses and resources designed to develop practical judgment based on TPS principles.",
+        "eBooks, courses and resources designed to develop practical judgment based on TPS principles.",
         button: "Coming soon",
         href: null,
         variant: "disabled",
