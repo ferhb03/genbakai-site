@@ -84,7 +84,7 @@ export default function EbookLeadForm({
         data-ebook={resourceSlug}
         className="mt-5 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white transition hover:bg-slate-800"
       >
-        Quiero recibir el ebook
+        Quiero recibir el eBook
       </button>
     );
   }
@@ -187,7 +187,7 @@ export default function EbookLeadForm({
             disabled={status === "loading"}
             className="w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {status === "loading" ? "Enviando..." : "Enviar ebook"}
+            {status === "loading" ? "Enviando..." : "Enviar eBook"}
           </button>
 
           {status === "error" && (

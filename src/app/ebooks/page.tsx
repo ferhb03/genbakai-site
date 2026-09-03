@@ -1,6 +1,40 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import EbookLeadForm from "@/components/EbookLeadForm";
 import ScrollToTop from "@/components/ScrollToTop";
+
+export const metadata: Metadata = {
+  title: "Ebooks y manuales prácticos | Genba-Kai",
+  description:
+    "Recursos prácticos para comprender los principios del Toyota Production System y aplicarlos a problemas reales de operación y mejora.",
+  alternates: {
+    canonical: "https://genbakai.com/ebooks",
+  },
+  openGraph: {
+    title: "Ebooks y manuales prácticos",
+    description:
+      "Recursos para comprender, aplicar y mejorar con principios del Toyota Production System.",
+    url: "https://genbakai.com/ebooks",
+    siteName: "Genba-Kai",
+    locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: "https://genbakai.com/og-ebooks.png",
+        width: 1200,
+        height: 630,
+        alt: "Ebooks y manuales prácticos de Genba-Kai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ebooks y manuales prácticos",
+    description:
+      "Recursos para comprender, aplicar y mejorar con principios del Toyota Production System.",
+    images: ["https://genbakai.com/og-ebooks.png"],
+  },
+};
 
 const ebooks = [
   {
