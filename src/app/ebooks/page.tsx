@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://genbakai.com/og-ebooks.png",
+        url: "https://genbakai.com/og-ebooks-v2.png",
         width: 1200,
         height: 630,
         alt: "eBooks y manuales prácticos de Genba-Kai",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "eBooks y manuales prácticos",
     description:
       "Recursos para comprender, aplicar y mejorar con principios del Toyota Production System.",
-    images: ["https://genbakai.com/og-ebooks.png"],
+    images: ["https://genbakai.com/og-ebooks-v2.png"],
   },
 };
 
