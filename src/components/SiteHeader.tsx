@@ -85,7 +85,7 @@ export default function SiteHeader() {
 
       // Evita reaccionar a movimientos mínimos del dedo
       const hideThreshold = 25;
-      const showThreshold = 100;
+      const showThreshold = 140;
 
       if (accumulatedScroll.current > hideThreshold) {
         setIsVisible(false);
@@ -267,7 +267,7 @@ export default function SiteHeader() {
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal md:text-xs">
               {content.diagnostics}
             </span>
           </Link>
@@ -299,7 +299,7 @@ export default function SiteHeader() {
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal md:text-xs">
               {content.consulting}
             </span>
           </a>
@@ -331,7 +331,7 @@ export default function SiteHeader() {
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal md:text-xs">
               {content.training}
             </span>
           </a>
@@ -363,7 +363,7 @@ export default function SiteHeader() {
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal md:text-xs">
               {content.resources}
             </span>
           </a>
@@ -395,7 +395,7 @@ px-2 py-2 text-center
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal md:text-xs">
               {content.about}
             </span>
           </a>
