@@ -22,28 +22,43 @@ export default function SiteHeader() {
   const accumulatedScroll = useRef(0);
   const isNavigating = useRef(false);
 
-  useEffect(() => {
     // Cada vez que cambia de página, mostrar el header
-    // y comenzar la nueva página desde arriba.
-    setIsVisible(true);
-    accumulatedScroll.current = 0;
-    isNavigating.current = true;
+    // y comenzar la nueva página desde arriba.  
+    useEffect(() => {
+      setIsVisible(true);
+      accumulatedScroll.current = 0;
+      isNavigating.current = true;
 
-    requestAnimationFrame(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "auto",
+      requestAnimationFrame(() => {
+        const hash = window.location.hash.replace("#", "");
+
+        if (hash) {
+          const target = document.getElementById(hash);
+
+          if (target) {
+            target.scrollIntoView({
+              behavior: "auto",
+              block: "start",
+            });
+
+            lastScrollY.current = window.scrollY;
+          }
+        } else {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "auto",
+          });
+
+          lastScrollY.current = 0;
+        }
+
+        window.setTimeout(() => {
+          isNavigating.current = false;
+          lastScrollY.current = window.scrollY;
+        }, 100);
       });
-
-      lastScrollY.current = 0;
-
-      window.setTimeout(() => {
-        isNavigating.current = false;
-        lastScrollY.current = window.scrollY;
-      }, 100);
-    });
-  }, [pathname]);
+    }, [pathname]);
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
@@ -244,7 +259,7 @@ export default function SiteHeader() {
         >
           {/* DIAGNÓSTICOS */}
           <Link
-            href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
+            href={isEnglish ? "/en/diagnosticos" : "/diagnosticos"}
               className="
               group col-span-2
               flex min-h-[70px] flex-col items-center justify-center

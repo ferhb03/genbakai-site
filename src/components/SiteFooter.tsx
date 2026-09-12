@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 export default function SiteFooter() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
+  const isHome = pathname === "/" || pathname === "/en";
 
   const content = isEnglish
     ? {
@@ -40,13 +41,63 @@ export default function SiteFooter() {
       };
 
   const handleFooterNavClick = () => {
-    if (window.innerWidth >= 768) return;
+    if (window.innerWidth >= 1024) return;
 
     window.dispatchEvent(
       new CustomEvent("genbakai:hide-header")
     );
   };
 
+  const handleFooterSectionClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    // En móvil/tablet ocultamos el header como hasta ahora
+    if (window.innerWidth < 1024) {
+      window.dispatchEvent(new CustomEvent("genbakai:hide-header"));
+    }
+
+    // Si estamos en otra página, dejamos que Next navegue normalmente
+    if (!isHome) return;
+
+    event.preventDefault();
+
+    const target = document.getElementById(sectionId);
+
+    if (!target) return;
+
+    // Mantiene la URL correcta
+    window.history.replaceState(
+      null,
+      "",
+      `${pathname}#${sectionId}`
+    );
+
+    requestAnimationFrame(() => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
+  const handleDiagnosticsClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    const diagnosticsPath = isEnglish
+      ? "/en/diagnosticos"
+      : "/diagnosticos";
+
+    if (pathname === diagnosticsPath) {
+      event.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+  
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-12">
@@ -77,44 +128,42 @@ export default function SiteFooter() {
 
             <nav className="mt-4 flex flex-col gap-3 text-sm text-slate-600">
               <Link
-                href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
-                onClick={handleFooterNavClick}
-                className="transition-colors hover:text-slate-900"
-              >
+                href={isEnglish ? "/en/diagnosticos" : "/diagnosticos"}
+                onClick={handleDiagnosticsClick}
+                className="transition-colors hover:text-slate-900">
                 {content.diagnostics}
               </Link>
 
-              <a
-                href={isEnglish ? "/en#consultoria" : "/#consultoria"}
-                onClick={handleFooterNavClick}
-                className="transition-colors hover:text-slate-900"
-              >
+              <Link
+                href={isHome ? "#consultoria" : isEnglish ? "/en#consultoria" : "/#consultoria"}
+                onClick={(event) => handleFooterSectionClick(event, "consultoria")}
+                className="transition-colors hover:text-slate-900">
                 {content.consulting}
-              </a>
+              </Link>
 
-              <a
-                href={isEnglish ? "/en#formacion" : "/#formacion"}
-                onClick={handleFooterNavClick}
-                className="transition-colors hover:text-slate-900"
-              >
+              <Link
+                href={isHome ? "#formacion" : isEnglish ? "/en#formacion" : "/#formacion"}
+                onClick={(event) => handleFooterSectionClick(event, "formacion")}
+                className="transition-colors hover:text-slate-900">
                 {content.training}
-              </a>
+              </Link>
 
-              <a
-                href={isEnglish ? "/en#recursos" : "/#recursos"}
-                onClick={handleFooterNavClick}
+              <Link
+                href={isHome ? "#recursos" : isEnglish ? "/en#recursos" : "/#recursos"}
+                onClick={(event) => handleFooterSectionClick(event, "recursos")}
                 className="transition-colors hover:text-slate-900"
               >
                 {content.resources}
-              </a>
+              </Link>
 
-              <a
-                href={isEnglish ? "/en#sobre" : "/#sobre"}
-                onClick={handleFooterNavClick}
+              <Link
+                href={isHome ? "#sobre" : isEnglish ? "/en#sobre" : "/#sobre"}
+                onClick={(event) => handleFooterSectionClick(event, "sobre")}
                 className="transition-colors hover:text-slate-900"
               >
                 {content.about}
-              </a>
+              </Link>
+
             </nav>
           </div>
 

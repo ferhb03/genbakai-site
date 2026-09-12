@@ -6,8 +6,8 @@ import { track } from "@vercel/analytics";
 export default function DiagnosticosPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <section className="bg-slate-50 py-10 border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-10">
+      <section className="bg-slate-50 py-15 border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-6">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Diagnósticos
           </p>
@@ -22,7 +22,7 @@ export default function DiagnosticosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-10">
+      <section className="mx-auto max-w-6xl px-6 py-15">
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         <div className="rounded-3xl border border-slate-200 p-8">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">

@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* ENFOQUE */}
-      <section id="enfoque" className="bg-slate-50 scroll-mt-28 py-15">
+      <section id="enfoque" className="bg-slate-50 scroll-mt-34 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -201,8 +201,8 @@ export default function Home() {
         </div>
       </section>
 
-        {/* CONSULTORIA */}
-        <section id="consultoria" className="bg-slate-50 md:scroll-mt-28 py-15">
+        {/* CONSULTORÍA */}
+        <section id="consultoria" className="bg-slate-50 md:scroll-mt-34 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -230,7 +230,7 @@ export default function Home() {
             </p>
             </div>
 
-            <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2 py-10">
             <div className="rounded-3xl border border-slate-200 p-6">
                 <h3 className="text-xl font-semibold">
                 Consultoría presencial
@@ -275,7 +275,7 @@ export default function Home() {
         </section>
 
       {/* FORMACION */}
-      <section id="formacion" className="py-15 md:scroll-mt-28">
+      <section id="formacion" className="py-15 md:scroll-mt-34">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-start">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* RECURSOS */}
-      <section id="recursos" className="bg-slate-50 border-y border-slate-200 py-15 md:scroll-mt-28">
+      <section id="recursos" className="bg-slate-50 border-y border-slate-200 py-15 md:scroll-mt-34">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -391,7 +391,7 @@ export default function Home() {
       </section>
 
       {/* SOBRE FERNANDO */}
-      <section id="sobre" className="py-15 md:scroll-mt-28">
+      <section id="sobre" className="py-15 md:scroll-mt-34">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -454,7 +454,7 @@ export default function Home() {
         </div>
        </section>
 
-      <section className="bg-slate-50 scroll-mt-28 py-15">
+      <section className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">

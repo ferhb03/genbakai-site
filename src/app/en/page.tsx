@@ -33,7 +33,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-        <section id="enfoque" className="bg-slate-50 pt-5 pb-15">
+        {/* HERO */}
+        <section id="top" className="bg-slate-50 pt-5 pb-15">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
             <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -50,7 +51,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                href="/en/diagnostics"
+                href="/en/diagnosticos"
                 className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
                 >
                 Explore diagnostics
@@ -77,6 +78,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* PROBLEMA */}
         <section id="problema" className="mx-auto max-w-6xl px-6 py-15">
         <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -121,6 +123,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* ENFOQUE */}
         <section id="enfoque" className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
@@ -214,6 +217,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* CONSULTORÍA */}
         <section id="consultoria" className="bg-slate-50 py-15 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
@@ -276,6 +280,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* FORMACIÓN */}
         <section id="formacion" className="py-15 md:scroll-mt-28">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
             <div className="max-w-3xl">
@@ -334,6 +339,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* RECURSOS */}
         <section id="recursos" className="border-y border-slate-200 bg-slate-50 py-15 md:scroll-mt-28">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
@@ -391,6 +397,7 @@ export default function Home() {
         </div>
         </section>
 
+        {/* SOBRE */}
         <section id="sobre" className="py-15 scroll-mt-28 py-15">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[0.85fr_1.15fr] md:items-center">
             <div>
@@ -456,7 +463,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <a
-                href="/en/diagnostics"
+                href="/en/diagnosticos"
                 className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
                 >
                 Explore diagnostics
