@@ -23,10 +23,10 @@ export default function Home() {
       {
         title: "Formación",
         description:
-          "eBooks, cursos y recursos para desarrollar criterio práctico basado en TPS.",
-        button: "Próximamente",
-        href: null,
-        variant: "disabled",
+          "Cursos y capacitación para desarrollar criterio práctico, capacidades de gestión y mejora continua.",
+        button: "Ver Formación",
+        href: "#formacion",
+        variant: "secondary",
       },
     ];
 
@@ -270,56 +270,121 @@ export default function Home() {
         </div>
         </section>
 
-      <section id="formacion" className="md:scroll-mt-28 py-15">
+      <section id="formacion" className="py-15 md:scroll-mt-28">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              Formación
+              FORMACIÓN
             </p>
+
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Aprender a construir sistemas de producción propios.
+              Desarrollar capacidades para construir y sostener mejores sistemas de producción.
             </h2>
+
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Recursos prácticos para comprender cómo diseñar, implementar
-              y sostener sistemas de producción basados en principios Lean
-              y Toyota Production System, adaptados a PyMEs industriales.
+              Capacitaciones, cursos y programas orientados a desarrollar criterio
+              práctico y capacidades de gestión basadas en principios Lean y del
+              Toyota Production System, adaptados a la realidad de cada empresa.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 p-6">
-              <h3 className="text-xl font-semibold">Ebooks</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                Material conceptual y práctico para entender los fundamentos del
-                sistema y aplicarlos en la realidad operativa.
-              </p>
-              <Link
-                href="/ebooks"
-                className="mt-6 inline-flex rounded-2xl border border-slate-300 bg-white px-4 py-4 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:border-slate-400 hover:bg-slate-100"
-              >
-                Ver eBooks
-              </Link>
-            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-semibold">
+                Cursos
+              </h3>
 
-            <div className="rounded-3xl border border-slate-200 p-6">
-              <h3 className="text-xl font-semibold">Cursos</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Programas estructurados para profundizar en principios TPS,
-                estabilidad operativa y desarrollo de personas.
+                Programas estructurados para profundizar conceptos de TPS, estabilidad
+                operativa, estandarización y mejora continua.
               </p>
+
               <button
-                type="button"
                 disabled
-                className="mt-6 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-500 opacity-60"
+                className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-500 opacity-60 cursor-default"
               >
                 Próximamente
               </button>
             </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-semibold">
+                Capacitación para empresas
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Formación práctica para equipos y líderes, enfocada en desarrollar
+                capacidades que puedan aplicarse directamente en la operación.
+              </p>
+
+              <a
+                href="mailto:fernando.benitez@genbakai.com?subject=Consulta%20sobre%20capacitaci%C3%B3n%20Genba-Kai"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+              >
+                Consultar
+              </a>
+            </div>
           </div>
-         </div> 
+        </div>
       </section>
 
-      <section id="sobre" className="bg-slate-50 py-15 md:scroll-mt-28">
+      <section id="recursos" className="bg-slate-50 border-y border-slate-200 py-15 md:scroll-mt-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+              RECURSOS
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+              Herramientas prácticas para seguir profundizando.
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Ebooks, guías y herramientas desarrolladas para comprender principios de mejora
+              operativa y aplicarlos en situaciones reales de trabajo.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {/* EBOOKS */}
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">
+                Ebooks
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Manuales y guías prácticas para profundizar en sistemas de producción,
+                TPS, Lean Manufacturing, estandarización y mejora continua.
+              </p>
+
+              <a
+                href="/ebooks"
+                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+              >
+                Ver ebooks
+              </a>
+            </div>
+
+            {/* NEWSLETTER */}
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">
+                Nuevos recursos
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Recibí novedades sobre nuevos diagnósticos, artículos, ebooks,
+                cursos y herramientas prácticas de Genba-Kai.
+              </p>
+
+              <div className="mt-6">
+                <NewsletterForm />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" className="py-15 md:scroll-mt-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -381,26 +446,6 @@ export default function Home() {
           </div>
         </div>
        </section>
-
-      <section id="comunidad" className="border-y border-slate-200 md:scroll-mt-28 py-15">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            Nuevos recursos
-          </p>
-
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Recibí herramientas prácticas de Genba-Kai
-          </h2>
-
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Suscribite para recibir nuevos diagnósticos, artículos, ebooks, cursos y
-            recursos sobre mejora operativa para PyMEs industriales.
-          </p>
-
-          <NewsletterForm />
-          
-        </div>
-      </section>
 
       <section className="bg-slate-50 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">

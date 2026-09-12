@@ -4,6 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
+import {
+  ClipboardCheck,
+  Settings,
+  BookOpen,
+  Library,
+  UserRound,
+} from "lucide-react";
 
 export default function SiteHeader() {
   const pathname = usePathname();
@@ -18,21 +25,6 @@ export default function SiteHeader() {
   useEffect(() => {
     lastScrollY.current = window.scrollY;
 
-    const handleHideHeader = () => {
-      if (window.innerWidth >= 768) return;
-
-      isNavigating.current = true;
-      setIsVisible(false);
-      accumulatedScroll.current = 0;
-
-      window.setTimeout(() => {
-        isNavigating.current = false;
-        lastScrollY.current = window.scrollY;
-      }, 1000);
-    };
-
-    window.addEventListener("genbakai:hide-header", handleHideHeader);
-
     const handleScroll = () => {
       const maxScrollY =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -44,13 +36,13 @@ export default function SiteHeader() {
 
       const difference = currentScrollY - lastScrollY.current;
 
-      // Ignorar el scroll generado al navegar desde el header
+      // Ignorar el scroll generado por navegación interna
       if (isNavigating.current) {
         lastScrollY.current = currentScrollY;
         return;
       }
 
-      // Siempre visible cerca del inicio de la página
+      // Siempre visible cerca del inicio
       if (currentScrollY < 40) {
         setIsVisible(true);
         accumulatedScroll.current = 0;
@@ -58,7 +50,7 @@ export default function SiteHeader() {
         return;
       }
 
-      // Si cambia la dirección, reinicia la acumulación
+      // Si cambia la dirección, reiniciar acumulación
       if (
         (difference > 0 && accumulatedScroll.current < 0) ||
         (difference < 0 && accumulatedScroll.current > 0)
@@ -68,17 +60,15 @@ export default function SiteHeader() {
 
       accumulatedScroll.current += difference;
 
-      // Tolerancia: no reaccionar a pequeños movimientos del dedo
+      // Evita reaccionar a movimientos mínimos del dedo
       const threshold = 20;
 
       if (accumulatedScroll.current > threshold) {
-        // Scroll hacia abajo
         setIsVisible(false);
         accumulatedScroll.current = 0;
       }
 
       if (accumulatedScroll.current < -threshold) {
-        // Scroll hacia arriba
         setIsVisible(true);
         accumulatedScroll.current = 0;
       }
@@ -86,13 +76,40 @@ export default function SiteHeader() {
       lastScrollY.current = currentScrollY;
     };
 
+    const handleHideHeader = () => {
+      if (window.innerWidth >= 1024) return;
+
+      isNavigating.current = true;
+      setIsVisible(false);
+      accumulatedScroll.current = 0;
+
+      window.setTimeout(() => {
+        isNavigating.current = false;
+        lastScrollY.current = window.scrollY;
+      }, 1000);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("genbakai:hide-header", handleHideHeader);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("genbakai:hide-header", handleHideHeader);
     };
   }, []);
+
+  const handleNavClick = () => {
+    if (window.innerWidth >= 1024) return;
+
+    isNavigating.current = true;
+    setIsVisible(false);
+    accumulatedScroll.current = 0;
+
+    window.setTimeout(() => {
+      isNavigating.current = false;
+      lastScrollY.current = window.scrollY;
+    }, 1000);
+  };
 
   const content = isEnglish
     ? {
@@ -101,7 +118,7 @@ export default function SiteHeader() {
         consulting: "CONSULTING",
         training: "TRAINING",
         resources: "RESOURCES",
-        about: "ABOUT FERNANDO",
+        about: "ABOUT US",
       }
     : {
         tagline: "Diagnósticos, consultoría y formación",
@@ -109,23 +126,8 @@ export default function SiteHeader() {
         consulting: "CONSULTORÍA",
         training: "FORMACIÓN",
         resources: "RECURSOS",
-        about: "ACERCA DE FERNANDO",
+        about: "NOSOTROS",
       };
-
-  const handleNavClick = () => {
-    // Solo aplicar este comportamiento en móvil
-    if (window.innerWidth >= 768) return;
-
-    isNavigating.current = true;
-    setIsVisible(false);
-    accumulatedScroll.current = 0;
-
-    // Mantener bloqueada la detección mientras ocurre el scroll
-    window.setTimeout(() => {
-      isNavigating.current = false;
-      lastScrollY.current = window.scrollY;
-    }, 1000);
-  };
 
   return (
     <header
@@ -135,15 +137,23 @@ export default function SiteHeader() {
         bg-white
         transition-transform duration-300 ease-out
         will-change-transform
-        ${
-          isVisible
-            ? "translate-y-0"
-            : "-translate-y-full"
-        }
-        md:translate-y-0
+        ${isVisible ? "translate-y-0" : "-translate-y-full"}
+        lg:translate-y-0
       `}
     >
-      <div className="mx-auto max-w-6xl px-4 pt-4 pb-4 md:flex md:items-center md:justify-between md:px-6 md:py-5">
+      <div
+        className="
+          mx-auto max-w-6xl px-4 py-4
+
+          lg:grid
+          lg:grid-cols-[1fr_auto_auto]
+          lg:items-center
+          lg:gap-6
+          lg:px-6
+          lg:py-5
+        "
+      >
+        {/* COLUMNA 1 — LOGO */}
         <Link
           href={isEnglish ? "/en" : "/"}
           className="flex items-center gap-3"
@@ -151,11 +161,11 @@ export default function SiteHeader() {
           <img
             src="/logo1.png"
             alt="Genba-Kai logo"
-            className="h-12 w-auto object-contain md:h-20"
+            className="h-14 w-auto object-contain md:h-16"
           />
 
           <div>
-            <div className="text-lg font-semibold tracking-tight text-slate-900 md:text-2xl">
+            <div className="text-xl font-semibold tracking-tight text-slate-900 md:text-xl">
               GENBA-KAI
             </div>
 
@@ -165,92 +175,238 @@ export default function SiteHeader() {
           </div>
         </Link>
 
-        <div className="mt-4 flex flex-col gap-4 md:mt-0 md:items-end">
-          <div className="flex items-center justify-end gap-3 text-xs font-medium text-slate-500 md:text-sm">
-            <Link
-              href="/"
-              className={`flex items-center gap-1.5 transition-colors ${
-                !isEnglish
-                  ? "font-semibold text-slate-900"
-                  : "hover:text-slate-900"
-              }`}
-            >
-              <ReactCountryFlag
-                countryCode="ES"
-                svg
-                style={{
-                  width: "1.2em",
-                  height: "1.2em",
-                }}
-                title="Español"
-              />
-              ES
-            </Link>
+        {/* COLUMNA 2 — NAVEGACIÓN */}
+        <nav
+          className="
+            order-3 mt-4
+            grid w-full grid-cols-6 gap-2
+            rounded-2xl border border-slate-200
+            bg-white p-2
+            text-slate-900
 
-            <span className="text-slate-300">|</span>
+            lg:order-none
+            lg:mt-0
+            lg:grid-cols-5
+            lg:gap-0
+            lg:px-3
+            lg:py-3
+          "
+        >
+          {/* DIAGNÓSTICOS */}
+          <Link
+            href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
+              className="
+              group col-span-2
+              flex min-h-[82px] flex-col items-center justify-center
+              gap-2 rounded-xl
+              border border-slate-200
+              px-2 py-3 text-center
+              transition-colors
+              hover:bg-slate-50
 
-            <Link
-              href="/en"
-              className={`flex items-center gap-1.5 transition-colors ${
-                isEnglish
-                  ? "font-semibold text-slate-900"
-                  : "hover:text-slate-900"
-              }`}
-            >
-              <ReactCountryFlag
-                countryCode="GB"
-                svg
-                style={{
-                  width: "1.2em",
-                  height: "1.2em",
-                }}
-                title="English"
-              />
-              EN
-            </Link>
-          </div>
+              lg:col-span-1
+              lg:min-h-[74px]
+              lg:min-w-[105px]
+              lg:rounded-none
+              lg:border-0
+              lg:px-4
+              lg:py-2
+            "
+          >
+            <ClipboardCheck
+              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              strokeWidth={1.8}
+            />
 
-          <nav className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-semibold text-slate-900 md:flex md:flex-wrap md:gap-4 md:text-base">
-            <Link
-              href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
-              onClick={handleNavClick}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
+            <span className="text-[11px] font-medium tracking-wide md:text-xs">
               {content.diagnostics}
-            </Link>
+            </span>
+          </Link>
 
-            <a
-              href={isEnglish ? "/en#consultoria" : "/#consultoria"}
-              onClick={handleNavClick}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
+          {/* CONSULTORÍA */}
+          <a
+            href={isEnglish ? "/en#consultoria" : "/#consultoria"}
+            onClick={handleNavClick}
+            className="
+              group col-span-2
+              flex min-h-[82px] flex-col items-center justify-center
+              gap-2 rounded-xl
+              border border-slate-200
+              px-2 py-3 text-center
+              transition-colors
+              hover:bg-slate-50
+
+              lg:col-span-1
+              lg:min-h-[74px]
+              lg:min-w-[105px]
+              lg:rounded-none
+              lg:border-0
+              lg:px-4
+              lg:py-2
+            "
+          >
+            <Settings
+              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              strokeWidth={1.8}
+            />
+
+            <span className="text-[11px] font-medium tracking-wide md:text-xs">
               {content.consulting}
-            </a>
+            </span>
+          </a>
 
-            <a
-              href={isEnglish ? "/en#formacion" : "/#formacion"}
-              onClick={handleNavClick}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
+          {/* FORMACIÓN */}
+          <a
+            href={isEnglish ? "/en#formacion" : "/#formacion"}
+            onClick={handleNavClick}
+            className="
+              group col-span-2
+              flex min-h-[82px] flex-col items-center justify-center
+              gap-2 rounded-xl
+              border border-slate-200
+              px-2 py-3 text-center
+              transition-colors
+              hover:bg-slate-50
+
+              lg:col-span-1
+              lg:min-h-[74px]
+              lg:min-w-[105px]
+              lg:rounded-none
+              lg:border-0
+              lg:px-4
+              lg:py-2
+            "
+          >
+            <BookOpen
+              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              strokeWidth={1.8}
+            />
+
+            <span className="text-[11px] font-medium tracking-wide md:text-xs">
               {content.training}
-            </a>
+            </span>
+          </a>
 
-            <a
-              href={isEnglish ? "/en#comunidad" : "/#comunidad"}
-              onClick={handleNavClick}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
+          {/* RECURSOS */}
+          <a
+            href={isEnglish ? "/en#recursos" : "/#recursos"}
+            onClick={handleNavClick}
+            className="
+              group col-span-3
+              flex min-h-[82px] flex-col items-center justify-center
+              gap-2 rounded-xl
+              border border-slate-200
+              px-2 py-3 text-center
+              transition-colors
+              hover:bg-slate-50
+
+              lg:col-span-1
+              lg:min-h-[74px]
+              lg:min-w-[105px]
+              lg:rounded-none
+              lg:border-0
+              lg:px-4
+              lg:py-2
+            "
+          >
+            <Library
+              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              strokeWidth={1.8}
+            />
+
+            <span className="text-[11px] font-medium tracking-wide md:text-xs">
               {content.resources}
-            </a>
+            </span>
+          </a>
 
-            <a
-              href={isEnglish ? "/en#sobre" : "/#sobre"}
-              onClick={handleNavClick}
-              className="whitespace-nowrap hover:text-slate-700"
-            >
+          {/* FERNANDO */}
+          <a
+            href={isEnglish ? "/en#sobre" : "/#sobre"}
+            onClick={handleNavClick}
+            className="
+              group col-span-3
+              flex min-h-[82px] flex-col items-center justify-center
+              gap-2 rounded-xl
+              border border-slate-200
+              px-2 py-3 text-center
+              transition-colors
+              hover:bg-slate-50
+
+              lg:col-span-1
+              lg:min-h-[74px]
+              lg:min-w-[105px]
+              lg:rounded-none
+              lg:border-0
+              lg:px-4
+              lg:py-2
+            "
+          >
+            <UserRound
+              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              strokeWidth={1.8}
+            />
+
+            <span className="text-[11px] font-medium tracking-wide md:text-xs">
               {content.about}
-            </a>
-          </nav>
+            </span>
+          </a>
+        </nav>
+
+        {/* COLUMNA 3 — IDIOMAS */}
+        <div
+          className="
+            order-2 mt-4
+            flex items-center justify-end gap-3
+            text-xs font-medium text-slate-500
+
+            lg:order-none
+            lg:mt-0
+            lg:flex-col
+            lg:items-start
+            lg:justify-center
+            lg:gap-2
+            lg:text-sm
+          "
+        >
+          <Link
+            href="/"
+            className={`flex items-center gap-1.5 transition-colors ${
+              !isEnglish
+                ? "font-semibold text-slate-900"
+                : "hover:text-slate-900"
+            }`}
+          >
+            <ReactCountryFlag
+              countryCode="ES"
+              svg
+              style={{
+                width: "1.2em",
+                height: "1.2em",
+              }}
+              title="Español"
+            />
+            ES
+          </Link>
+
+          <Link
+            href="/en"
+            className={`flex items-center gap-1.5 transition-colors ${
+              isEnglish
+                ? "font-semibold text-slate-900"
+                : "hover:text-slate-900"
+            }`}
+          >
+            <ReactCountryFlag
+              countryCode="GB"
+              svg
+              style={{
+                width: "1.2em",
+                height: "1.2em",
+              }}
+              title="English"
+            />
+            EN
+          </Link>
         </div>
       </div>
     </header>

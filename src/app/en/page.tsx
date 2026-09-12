@@ -21,12 +21,12 @@ export default function Home() {
         variant: "secondary",
     },
     {
-        title: "Training",
-        description:
-        "eBooks, courses and resources designed to develop practical judgment based on TPS principles.",
-        button: "Coming soon",
-        href: null,
-        variant: "disabled",
+    title: "Training",
+    description:
+        "Courses and company training designed to develop practical judgment, management capabilities and continuous improvement skills.",
+    button: "View training",
+    href: "#formacion",
+    variant: "secondary",
     },
     ];
 
@@ -276,7 +276,7 @@ export default function Home() {
         </div>
         </section>
 
-        <section id="formacion" className="scroll-mt-28 py-15">
+        <section id="formacion" className="py-15 md:scroll-mt-28">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -284,47 +284,114 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Learn how to build production systems tailored to each operation.
+                Develop the capabilities needed to build and sustain better production systems.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-                Practical resources for designing, implementing and sustaining
-                production systems grounded in Lean thinking and TPS principles,
-                adapted to the reality of industrial SMEs.
+                Training, courses and programs designed to develop practical judgment
+                and management capabilities based on Lean and Toyota Production System
+                principles, adapted to the reality of each company.
             </p>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 p-6">
-                <h3 className="text-xl font-semibold">Ebooks</h3>
+            <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+                <h3 className="text-xl font-semibold">
+                Courses
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Conceptual and practical resources to understand the fundamentals of
-                production systems and apply them to real operating conditions.
+                Structured programs to deepen understanding of TPS, operational
+                stability, standardization and continuous improvement.
                 </p>
 
-                <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium">
+                <button
+                disabled
+                className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-500 opacity-60 cursor-default"
+                >
                 Coming soon
                 </button>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 p-6">
-                <h3 className="text-xl font-semibold">Courses</h3>
+            <div className="rounded-3xl border border-slate-200 bg-white p-6">
+                <h3 className="text-xl font-semibold">
+                In-company training
+                </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Structured programs to develop a deeper understanding of TPS principles,
-                operational stability and people development.
+                Practical training for teams and leaders, focused on developing
+                capabilities that can be applied directly to the operation.
                 </p>
 
-                <button className="mt-6 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium">
-                Coming soon
-                </button>
+                <a
+                href="mailto:fernando.benitez@genbakai.com?subject=Genba-Kai%20Training%20Inquiry"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+                >
+                Get in touch
+                </a>
             </div>
             </div>
         </div>
         </section>
 
-        <section id="sobre" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+        <section id="recursos" className="border-y border-slate-200 bg-slate-50 py-15 md:scroll-mt-28">
+        <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+                RESOURCES
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+                Practical tools to keep building knowledge.
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-slate-600">
+                Ebooks, guides and practical resources developed to help understand
+                operational improvement principles and apply them to real working
+                environments.
+            </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {/* EBOOKS */}
+            <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                Ebooks
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Practical manuals and guides on production systems, TPS, Lean
+                Manufacturing, standardization and continuous improvement.
+                </p>
+
+                <a
+                href="/en/ebooks"
+                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+                >
+                View ebooks
+                </a>
+            </div>
+
+            {/* NEWSLETTER */}
+            <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">
+                New resources
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                Receive updates about new diagnostics, articles, ebooks, courses and
+                practical Genba-Kai resources.
+                </p>
+
+                <div className="mt-6">
+                <NewsletterForm language="en" />
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="sobre" className="py-15 scroll-mt-28 py-15">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[0.85fr_1.15fr] md:items-center">
             <div>
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
@@ -376,30 +443,11 @@ export default function Home() {
         
         </section>
 
-        <section id="comunidad" className="border-y border-slate-200 bg-white scroll-mt-28 py-15">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            NEW RESOURCES
-            </p>
-
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Practical Genba-Kai resources directly to your inbox.
-            </h2>
-
-            <p className="mt-4 text-base leading-7 text-slate-600">
-            Subscribe to receive new diagnostics, articles, ebooks, courses and
-            resources focused on operational improvement for industrial SMEs.
-            </p>
-
-            <NewsletterForm language="en" />
-        </div>
-        </section>
-
         <section className="bg-slate-50 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                NEXT STEP
+                NEXT STEPS
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">

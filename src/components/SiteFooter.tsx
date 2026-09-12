@@ -17,7 +17,7 @@ export default function SiteFooter() {
         consulting: "Consulting",
         training: "Training",
         resources: "Resources",
-        about: "About Fernando",
+        about: "About Us",
         information: "Information",
         privacy: "Privacy Policy",
         rights: "All rights reserved.",
@@ -32,7 +32,7 @@ export default function SiteFooter() {
         consulting: "Consultoría",
         training: "Formación",
         resources: "Recursos",
-        about: "Acerca de Fernando",
+        about: "Acerca de Nosotros",
         information: "Información",
         privacy: "Política de privacidad",
         rights: "Todos los derechos reservados.",
@@ -101,7 +101,7 @@ export default function SiteFooter() {
               </a>
 
               <a
-                href={isEnglish ? "/en#comunidad" : "/#comunidad"}
+                href={isEnglish ? "/en#recursos" : "/#recursos"}
                 onClick={handleFooterNavClick}
                 className="transition-colors hover:text-slate-900"
               >
