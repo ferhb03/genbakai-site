@@ -23,6 +23,15 @@ export default function SiteHeader() {
   const isNavigating = useRef(false);
 
   useEffect(() => {
+    setIsVisible(true);
+    accumulatedScroll.current = 0;
+
+    window.setTimeout(() => {
+      lastScrollY.current = window.scrollY;
+    }, 100);
+  }, [pathname]);
+
+  useEffect(() => {
     lastScrollY.current = window.scrollY;
 
     const handleScroll = () => {
