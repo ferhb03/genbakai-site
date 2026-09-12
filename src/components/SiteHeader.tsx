@@ -24,41 +24,58 @@ export default function SiteHeader() {
 
     // Cada vez que cambia de página, mostrar el header
     // y comenzar la nueva página desde arriba.  
-    useEffect(() => {
-      setIsVisible(true);
-      accumulatedScroll.current = 0;
-      isNavigating.current = true;
+useEffect(() => {
+  setIsVisible(true);
+  accumulatedScroll.current = 0;
+  isNavigating.current = true;
 
-      requestAnimationFrame(() => {
-        const hash = window.location.hash.replace("#", "");
+  const scrollToDestination = () => {
+    const hash = window.location.hash.replace("#", "");
 
-        if (hash) {
-          const target = document.getElementById(hash);
+    if (hash) {
+      const target = document.getElementById(hash);
 
-          if (target) {
-            target.scrollIntoView({
-              behavior: "auto",
-              block: "start",
-            });
+      if (target) {
+        target.scrollIntoView({
+          behavior: "auto",
+          block: "start",
+        });
 
-            lastScrollY.current = window.scrollY;
-          }
-        } else {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "auto",
-          });
+        lastScrollY.current = window.scrollY;
+        return true;
+      }
 
-          lastScrollY.current = 0;
-        }
+      return false;
+    }
 
-        window.setTimeout(() => {
-          isNavigating.current = false;
-          lastScrollY.current = window.scrollY;
-        }, 100);
-      });
-    }, [pathname]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+
+    lastScrollY.current = 0;
+    return true;
+  };
+
+  // Primer intento cuando cambia la ruta
+  requestAnimationFrame(() => {
+    const success = scrollToDestination();
+
+    // Si la nueva página todavía no terminó de renderizar,
+    // volver a intentarlo unos milisegundos después.
+    if (!success) {
+      window.setTimeout(() => {
+        scrollToDestination();
+      }, 100);
+    }
+
+    window.setTimeout(() => {
+      isNavigating.current = false;
+      lastScrollY.current = window.scrollY;
+    }, 200);
+  });
+}, [pathname]);
 
   useEffect(() => {
     lastScrollY.current = window.scrollY;
