@@ -23,6 +23,29 @@ export default function SiteHeader() {
   const isNavigating = useRef(false);
 
   useEffect(() => {
+    // Cada vez que cambia de página, mostrar el header
+    // y comenzar la nueva página desde arriba.
+    setIsVisible(true);
+    accumulatedScroll.current = 0;
+    isNavigating.current = true;
+
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+
+      lastScrollY.current = 0;
+
+      window.setTimeout(() => {
+        isNavigating.current = false;
+        lastScrollY.current = window.scrollY;
+      }, 100);
+    });
+  }, [pathname]);
+
+  useEffect(() => {
     setIsVisible(true);
     accumulatedScroll.current = 0;
 
@@ -161,7 +184,6 @@ export default function SiteHeader() {
       }, 700);
     }
   };
-
 
   return (
     <header
