@@ -165,6 +165,9 @@ export default function SiteHeader() {
       accumulatedScroll.current = 0;
       isNavigating.current = true;
 
+      // Elimina #formacion, #consultoria, #recursos, etc. de la URL
+      window.history.replaceState(null, "", homePath);
+
       window.scrollTo({
         top: 0,
         behavior: "smooth",
