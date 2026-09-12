@@ -232,10 +232,8 @@ export default function SiteHeader() {
           className="
             order-3 mt-4
             grid w-full grid-cols-6 gap-2
-            rounded-2xl border border-slate-200
             bg-white p-2
             text-slate-900
-
             lg:order-none
             lg:mt-0
             lg:grid-cols-5
@@ -251,11 +249,11 @@ export default function SiteHeader() {
               group col-span-2
               flex min-h-[70px] flex-col items-center justify-center
               gap-1.5 rounded-xl
-              border border-slate-200
+              
               px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
-
+              border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
               lg:min-w-[105px]
@@ -283,11 +281,11 @@ export default function SiteHeader() {
               group col-span-2
               flex min-h-[70px] flex-col items-center justify-center
               gap-1.5 rounded-xl
-              border border-slate-200
+              
               px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
-
+              border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
               lg:min-w-[105px]
@@ -347,11 +345,11 @@ export default function SiteHeader() {
               group col-span-3
               flex min-h-[70px] flex-col items-center justify-center
               gap-1.5 rounded-xl
-              border border-slate-200
+              
               px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
-
+              border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
               lg:min-w-[105px]
@@ -377,10 +375,10 @@ export default function SiteHeader() {
             onClick={handleNavClick}
             className="
               group col-span-3
- flex min-h-[70px] flex-col items-center justify-center
-gap-1.5 rounded-xl
-border border-slate-200
-px-2 py-2 text-center
+              flex min-h-[70px] flex-col items-center justify-center
+              gap-1.5 rounded-xl
+              border border-slate-200
+              px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
