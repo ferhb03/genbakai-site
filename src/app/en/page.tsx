@@ -218,7 +218,7 @@ export default function Home() {
         </section>
 
         {/* CONSULTORÍA */}
-        <section id="consultoria" className="bg-slate-50 py-15 scroll-mt-28 py-15">
+        <section id="consultoria" className="bg-slate-50 md:scroll-mt-34 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
