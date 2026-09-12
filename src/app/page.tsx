@@ -33,6 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
+      {/* HERO */}
       <section id="top" className="bg-slate-50 py-15">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
@@ -76,6 +77,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PROBLEMA */}
       <section id="problema" className="mx-auto max-w-6xl px-6 py-15">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
@@ -113,6 +115,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ENFOQUE */}
       <section id="enfoque" className="bg-slate-50 scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
@@ -198,6 +201,7 @@ export default function Home() {
         </div>
       </section>
 
+        {/* CONSULTORIA */}
         <section id="consultoria" className="bg-slate-50 md:scroll-mt-28 py-15">
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
@@ -270,8 +274,9 @@ export default function Home() {
         </div>
         </section>
 
+      {/* FORMACION */}
       <section id="formacion" className="py-15 md:scroll-mt-28">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-center">
+        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.8fr_0.8fr] md:items-start">
           <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               FORMACIÓN
@@ -328,6 +333,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* RECURSOS */}
       <section id="recursos" className="bg-slate-50 border-y border-slate-200 py-15 md:scroll-mt-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-3xl">
@@ -384,6 +390,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SOBRE FERNANDO */}
       <section id="sobre" className="py-15 md:scroll-mt-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
