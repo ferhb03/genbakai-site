@@ -245,10 +245,10 @@ export default function SiteHeader() {
             href={isEnglish ? "/en/diagnostics" : "/diagnosticos"}
               className="
               group col-span-2
-              flex min-h-[82px] flex-col items-center justify-center
-              gap-2 rounded-xl
+              flex min-h-[70px] flex-col items-center justify-center
+              gap-1.5 rounded-xl
               border border-slate-200
-              px-2 py-3 text-center
+              px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
@@ -262,11 +262,11 @@ export default function SiteHeader() {
             "
           >
             <ClipboardCheck
-              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              className="h-6 w-6 text-slate-800 md:h-7 md:w-7"
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-wide md:text-xs">
+            <span className="text-[11px] font-medium tracking-normal md:text-xs">
               {content.diagnostics}
             </span>
           </Link>
@@ -277,10 +277,10 @@ export default function SiteHeader() {
             onClick={handleNavClick}
             className="
               group col-span-2
-              flex min-h-[82px] flex-col items-center justify-center
-              gap-2 rounded-xl
+              flex min-h-[70px] flex-col items-center justify-center
+              gap-1.5 rounded-xl
               border border-slate-200
-              px-2 py-3 text-center
+              px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
@@ -294,11 +294,11 @@ export default function SiteHeader() {
             "
           >
             <Settings
-              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              className="h-6 w-6 text-slate-800 md:h-7 md:w-7"
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-wide md:text-xs">
+            <span className="text-[11px] font-medium tracking-normal md:text-xs">
               {content.consulting}
             </span>
           </a>
@@ -309,10 +309,10 @@ export default function SiteHeader() {
             onClick={handleNavClick}
             className="
               group col-span-2
-              flex min-h-[82px] flex-col items-center justify-center
-              gap-2 rounded-xl
+              flex min-h-[70px] flex-col items-center justify-center
+              gap-1.5 rounded-xl
               border border-slate-200
-              px-2 py-3 text-center
+              px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
@@ -326,11 +326,11 @@ export default function SiteHeader() {
             "
           >
             <BookOpen
-              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              className="h-6 w-6 text-slate-800 md:h-7 md:w-7"
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-wide md:text-xs">
+            <span className="text-[11px] font-medium tracking-normal md:text-xs">
               {content.training}
             </span>
           </a>
@@ -341,10 +341,10 @@ export default function SiteHeader() {
             onClick={handleNavClick}
             className="
               group col-span-3
-              flex min-h-[82px] flex-col items-center justify-center
-              gap-2 rounded-xl
+              flex min-h-[70px] flex-col items-center justify-center
+              gap-1.5 rounded-xl
               border border-slate-200
-              px-2 py-3 text-center
+              px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
@@ -358,11 +358,11 @@ export default function SiteHeader() {
             "
           >
             <Library
-              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              className="h-6 w-6 text-slate-800 md:h-7 md:w-7"
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-wide md:text-xs">
+            <span className="text-[11px] font-medium tracking-normal md:text-xs">
               {content.resources}
             </span>
           </a>
@@ -373,10 +373,10 @@ export default function SiteHeader() {
             onClick={handleNavClick}
             className="
               group col-span-3
-              flex min-h-[82px] flex-col items-center justify-center
-              gap-2 rounded-xl
-              border border-slate-200
-              px-2 py-3 text-center
+ flex min-h-[70px] flex-col items-center justify-center
+gap-1.5 rounded-xl
+border border-slate-200
+px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
 
@@ -390,11 +390,11 @@ export default function SiteHeader() {
             "
           >
             <UserRound
-              className="h-7 w-7 text-slate-800 md:h-7 md:w-7"
+              className="h-6 w-6 text-slate-800 md:h-7 md:w-7"
               strokeWidth={1.8}
             />
 
-            <span className="text-[11px] font-medium tracking-wide md:text-xs">
+            <span className="text-[11px] font-medium tracking-normal md:text-xs">
               {content.about}
             </span>
           </a>
