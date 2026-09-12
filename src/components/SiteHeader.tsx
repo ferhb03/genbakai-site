@@ -46,15 +46,6 @@ export default function SiteHeader() {
   }, [pathname]);
 
   useEffect(() => {
-    setIsVisible(true);
-    accumulatedScroll.current = 0;
-
-    window.setTimeout(() => {
-      lastScrollY.current = window.scrollY;
-    }, 100);
-  }, [pathname]);
-
-  useEffect(() => {
     lastScrollY.current = window.scrollY;
 
     const handleScroll = () => {
