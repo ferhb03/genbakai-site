@@ -84,14 +84,15 @@ export default function SiteHeader() {
       accumulatedScroll.current += difference;
 
       // Evita reaccionar a movimientos mínimos del dedo
-      const threshold = 20;
+      const hideThreshold = 25;
+      const showThreshold = 70;
 
-      if (accumulatedScroll.current > threshold) {
+      if (accumulatedScroll.current > hideThreshold) {
         setIsVisible(false);
         accumulatedScroll.current = 0;
       }
 
-      if (accumulatedScroll.current < -threshold) {
+      if (accumulatedScroll.current < -showThreshold) {
         setIsVisible(true);
         accumulatedScroll.current = 0;
       }
