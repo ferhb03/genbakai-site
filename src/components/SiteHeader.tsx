@@ -138,6 +138,31 @@ export default function SiteHeader() {
         about: "NOSOTROS",
       };
 
+  const handleLogoClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    const homePath = isEnglish ? "/en" : "/";
+
+    if (pathname === homePath) {
+      event.preventDefault();
+
+      setIsVisible(true);
+      accumulatedScroll.current = 0;
+      isNavigating.current = true;
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      window.setTimeout(() => {
+        isNavigating.current = false;
+        lastScrollY.current = window.scrollY;
+      }, 700);
+    }
+  };
+
+
   return (
     <header
       className={`
@@ -165,6 +190,7 @@ export default function SiteHeader() {
         {/* COLUMNA 1 — LOGO */}
         <Link
           href={isEnglish ? "/en" : "/"}
+          onClick={handleLogoClick}
           className="flex items-center gap-3"
         >
           <img
