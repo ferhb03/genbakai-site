@@ -38,16 +38,22 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-              MEJORA OPERATIVA PARA PyMEs INDUSTRIALES
+              MEJORA OPERATIVA EN PLANTA PARA PYMES INDUSTRIALES
             </p>
 
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-              Sistemas de producción para que las PyMEs industriales recuperen estabilidad y puedan crecer con mayor control.
+              Menos pérdidas operativas. Más productividad, capacidad y control.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-              Trabajamos junto al equipo para transformar procesos desordenados en un sistema simple, visible y sostenible que pueda mantenerse en el tiempo.
+              Analizamos e implementamos mejoras sobre los problemas que elevan costos y limitan la producción:
+              scrap, retrabajos, esperas, paradas, desvíos de calidad y procesos que dependen demasiado de personas específicas.
             </p>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 font-semibold">
+              Trabajamos directamente en planta junto al equipo y transmitimos conocimiento para asegurar la sostenibilidad de las mejoras.
+            </p>
+
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
