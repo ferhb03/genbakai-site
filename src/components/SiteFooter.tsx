@@ -188,6 +188,16 @@ export default function SiteFooter() {
               >
                 LinkedIn
               </a>
+
+              <a
+                href="https://www.instagram.com/genbakaiconsulting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-slate-900"
+              >
+                Instagram
+              </a>
+
             </div>
           </div>
         </div>
