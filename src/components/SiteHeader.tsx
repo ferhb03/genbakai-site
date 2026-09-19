@@ -169,17 +169,17 @@ useEffect(() => {
 
   const content = isEnglish
     ? {
-        tagline: "Diagnostics, consulting and training",
+        tagline: "Diagnostics, operational improvement and training",
         diagnostics: "DIAGNOSTICS",
-        consulting: "CONSULTING",
+        consulting: "OPERATIONAL IMPROVEMENT",
         training: "TRAINING",
         resources: "RESOURCES",
         about: "ABOUT US",
       }
     : {
-        tagline: "Diagnósticos, consultoría y formación",
+        tagline: "Diagnósticos, mejoras en planta y formación",
         diagnostics: "DIAGNÓSTICOS",
-        consulting: "CONSULTORÍA",
+        consulting: "MEJORA OPERATIVA",
         training: "FORMACIÓN",
         resources: "RECURSOS",
         about: "NOSOTROS",
@@ -229,7 +229,7 @@ useEffect(() => {
           mx-auto max-w-6xl px-4 py-4
 
           lg:grid
-          lg:grid-cols-[1fr_auto_auto]
+          lg:grid-cols-[1fr_auto_1fr]
           lg:items-center
           lg:gap-6
           lg:px-6
@@ -240,7 +240,7 @@ useEffect(() => {
         <Link
           href={isEnglish ? "/en" : "/"}
           onClick={handleLogoClick}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 lg:min-w-[300px] lg:justify-self-start"
         >
           <img
             src="/logo1.png"
@@ -249,12 +249,24 @@ useEffect(() => {
           />
 
           <div>
-            <div className="text-xl font-semibold tracking-tight text-slate-900 md:text-xl">
+            <div className="whitespace-nowrap text-xl font-semibold tracking-tight text-slate-900 md:text-2xl">
               GENBA-KAI
             </div>
 
-            <div className="text-xs text-slate-500 md:text-sm">
-              {content.tagline}
+            <div className="text-xs leading-tight text-slate-500 md:text-sm">
+              {isEnglish ? (
+                <>
+                  Diagnostics, operational
+                  <br />
+                  improvement and training
+                </>
+              ) : (
+                <>
+                  Diagnósticos, mejoras
+                  <br />
+                  en planta y formación
+                </>
+              )}
             </div>
           </div>
         </Link>
@@ -263,15 +275,17 @@ useEffect(() => {
         <nav
           className="
             order-3 mt-4
-            grid w-full grid-cols-6 gap-2
+            grid w-full grid-cols-6 gap-1
             bg-white p-2
             text-slate-900
             lg:order-none
             lg:mt-0
+            lg:w-auto
             lg:grid-cols-5
             lg:gap-0
             lg:px-3
             lg:py-3
+            lg:justify-self-center
           "
         >
           {/* DIAGNÓSTICOS */}
@@ -288,7 +302,8 @@ useEffect(() => {
               border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
-              lg:min-w-[105px]
+              lg:min-w-0
+              lg:w-[120px]
               lg:rounded-none
               lg:border-0
               lg:px-4
@@ -300,7 +315,7 @@ useEffect(() => {
               strokeWidth={1.8}
             />
 
-            <span className="text-[10px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal leading-tight md:text-[11px] lg:max-w-[90px] whitespace-normal">
               {content.diagnostics}
             </span>
           </Link>
@@ -320,7 +335,8 @@ useEffect(() => {
               border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
-              lg:min-w-[105px]
+              lg:min-w-0
+              lg:w-[120px]
               lg:rounded-none
               lg:border-0
               lg:px-4
@@ -332,7 +348,7 @@ useEffect(() => {
               strokeWidth={1.8}
             />
 
-            <span className="text-[10px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal leading-tight md:text-[11px] lg:max-w-[90px] whitespace-normal">
               {content.consulting}
             </span>
           </a>
@@ -345,14 +361,15 @@ useEffect(() => {
               group col-span-2
               flex min-h-[70px] flex-col items-center justify-center
               gap-1.5 rounded-xl
-              border border-slate-200
+
               px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
-
+              border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
-              lg:min-w-[105px]
+              lg:min-w-0
+              lg:w-[120px]
               lg:rounded-none
               lg:border-0
               lg:px-4
@@ -364,7 +381,7 @@ useEffect(() => {
               strokeWidth={1.8}
             />
 
-            <span className="text-[10px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal leading-tight md:text-[11px] lg:max-w-[90px] whitespace-normal">
               {content.training}
             </span>
           </a>
@@ -384,7 +401,8 @@ useEffect(() => {
               border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
-              lg:min-w-[105px]
+              lg:min-w-0
+              lg:w-[120px]
               lg:rounded-none
               lg:border-0
               lg:px-4
@@ -396,7 +414,7 @@ useEffect(() => {
               strokeWidth={1.8}
             />
 
-            <span className="text-[10px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal leading-tight md:text-[11px] lg:max-w-[90px] whitespace-normal">
               {content.resources}
             </span>
           </a>
@@ -409,14 +427,15 @@ useEffect(() => {
               group col-span-3
               flex min-h-[70px] flex-col items-center justify-center
               gap-1.5 rounded-xl
-              border border-slate-200
+
               px-2 py-2 text-center
               transition-colors
               hover:bg-slate-50
-
+              border border-slate-200
               lg:col-span-1
               lg:min-h-[74px]
-              lg:min-w-[105px]
+              lg:min-w-0
+              lg:w-[120px]
               lg:rounded-none
               lg:border-0
               lg:px-4
@@ -428,7 +447,7 @@ useEffect(() => {
               strokeWidth={1.8}
             />
 
-            <span className="text-[10px] font-medium tracking-normal md:text-xs">
+            <span className="text-[10px] font-medium tracking-normal leading-tight md:text-[11px] lg:max-w-[90px] whitespace-normal">
               {content.about}
             </span>
           </a>
@@ -445,6 +464,7 @@ useEffect(() => {
             lg:mt-0
             lg:flex-col
             lg:items-start
+            lg:justify-self-end
             lg:justify-center
             lg:gap-2
             lg:text-sm

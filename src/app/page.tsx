@@ -5,7 +5,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 export default function Home() {
     const paths = [
       {
-        title: "Evaluá el estado actual de tu operación",
+        title: "Evaluación el estado actual de tu operación",
         description:
           "Descubrí las principales oportunidades de mejora antes de comenzar cualquier implementación.",
         button: "Ver diagnósticos",
@@ -58,9 +58,9 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/diagnosticos"
-                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
+                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white"
               >
-                Explorar diagnósticos
+                Hacer autodiagnóstico
               </a>
               <a
                 href="/#consultoria"
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-5">
+          <div className="rounded-2xl border border-slate-200 bg-white p-2">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
               <img
                 src="/hero-industrial.png"
@@ -85,37 +85,41 @@ export default function Home() {
 
       {/* PROBLEMA */}
       <section id="problema" className="mx-auto max-w-6xl px-6 py-15">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             El problema
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Muchas iniciativas de mejora no fallan por falta de herramientas,
-            sino por falta de estabilidad.
+            Las pérdidas operativas no siempre aparecen donde se las busca.
           </h2>
+          <p className="mt-3 text-sm leading-6 text-slate-600">
+            Una planta puede estar produciendo y cumpliendo pedidos mientras pierde materiales,
+            horas, capacidad y recursos en problemas que se volvieron parte de la rutina.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-slate-200 p-6">
-            <h3 className="text-lg font-semibold">Herramientas sin comprensión</h3>
+            <h3 className="text-lg font-semibold">Pérdidas que no se cuantifican</h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
-              Aplicar técnicas sin desarrollar criterio genera mejoras
-              superficiales.
+              Scrap, retrabajos, esperas y paradas existen,
+              pero no siempre se conoce su impacto económico.
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6">
-            <h3 className="text-lg font-semibold">Mejora sin estándar</h3>
+            <h3 className="text-lg font-semibold">Costos que absorben ineficiencias</h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
-              Sin estabilidad operativa, cualquier avance es difícil de sostener.
+              Cuando las pérdidas quedan mezcladas dentro de la operación,
+              es difícil saber cuánto cuesta realmente producir.
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-200 p-6">
-            <h3 className="text-lg font-semibold">Poco desarrollo de personas</h3>
+            <h3 className="text-lg font-semibold">Problemas que se normalizan</h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
-              Los sistemas mejoran cuando el equipo comprende y practica el
-              estándar.
+              Desvíos repetitivos, urgencias y dependencia de personas
+              específicas terminan aceptándose como parte del trabajo.
             </p>
           </div>
         </div>
@@ -124,37 +128,37 @@ export default function Home() {
       {/* ENFOQUE */}
       <section id="enfoque" className="bg-slate-50 scroll-mt-34 py-15">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="max-w-3xl">
+          <div className="max-w-5xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
               El enfoque Genba-kai
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Antes de mejorar, entender y estabilizar.
+              Antes de mejorar, hay que hacer visible dónde está la perdida.
             </h2>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Entender el estándar</h3>
+              <h3 className="text-lg font-semibold">Entender la operación real</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                La mejora comienza con una referencia clara de cómo debería
-                funcionar el proceso.
+                Observamos el proceso en planta para entender cómo funciona hoy,
+                no cómo suponemos que debería funcionar.
               </p>
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Observar en el Genba</h3>
+              <h3 className="text-lg font-semibold">Cuantificar y priorizar</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                La realidad operativa es el punto de partida para diagnosticar y
-                decidir.
+                Identificamos pérdidas, restricciones y desvíos para concentrar
+                los esfuerzos donde existe mayor impacto.
               </p>
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Desarrollar personas</h3>
+              <h3 className="text-lg font-semibold">Implementar y sostener</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                El aprendizaje del equipo es la base para sostener la mejora
-                continua.
+                Trabajamos junto al equipo sobre las causas y dejamos estándares,
+                indicadores y rutinas que permitan mantener la mejora.
               </p>
             </div>
           </div>
@@ -162,12 +166,12 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-15">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Tres caminos para empezar
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Tres formas de empezar a mejorar tu operación
+            Empezamos según el problema que se necesita resolver.
           </h2>
         </div>
 
@@ -212,40 +216,34 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                Consultoría
+                Mejora operativa
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Acompañamiento para transformar criterio en implementación.
+                Del diagnóstico a la mejora implementada.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Acompañamiento práctico para ayudar a empresas industriales
-              a construir sistemas de producción propios, desarrollar personas
-              y mejorar resultados de forma sostenible.
+              No entregamos solamente recomendaciones. Trabajamos junto a responsables y equipos
+              de planta para analizar problemas, implementar mejoras y desarrollar una forma de gestión
+              que permita sostenerlas.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Conocé nuestra forma de trabajo y cómo acompañamos a las empresas
-              desde el diagnóstico inicial hasta la implementación y el desarrollo
-              de capacidades internas.
+              El acompañamiento puede abarcar productividad, capacidad, calidad, estandarización, indicadores,
+              resolución de problemas y desarrollo de líderes, según las prioridades detectadas en la operación.
             </p>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              El brochure presenta nuestra propuesta de valor, metodología de
-              implementación, etapas de trabajo y modalidades de acompañamiento para
-              PyMEs industriales.
-            </p>
+
             </div>
 
             <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-2 py-10">
             <div className="rounded-3xl border border-slate-200 p-6">
                 <h3 className="text-xl font-semibold">
-                Consultoría presencial
+                Mejoras en planta
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Acompañamiento práctico para ayudar a empresas industriales
-                a construir sistemas de producción propios, desarrollar personas
-                y mejorar resultados de forma sostenible.
+                Acompañamiento directo desde el diagnóstico hasta la implementación
+                de mejoras sobre problemas operativos concretos.
                 </p>
 
                 <a
@@ -264,16 +262,15 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Espacio de acompañamiento para dueños, gerentes y líderes que necesitan
-                resolver desafíos operativos, ordenar prioridades y tomar mejores decisiones
-                para avanzar en sus procesos de mejora.
+                Acompañamiento para dueños, gerentes y responsables que necesitan ordenar prioridades,
+                analizar problemas operativos y tomar mejores decisiones de implementación.
                 </p>
 
                 <a
                 href="mailto:fernando.benitez@genbakai.com"
                 className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
                 >
-                Contactar
+                Contactanos
                 </a>
             </div>
             </div>
@@ -289,13 +286,12 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Desarrollar capacidades para construir y sostener mejores sistemas de producción.
+              Desarrollar equipos capaces de sostener la mejora.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Capacitaciones, cursos y programas orientados a desarrollar criterio
-              práctico y capacidades de gestión basadas en principios Lean y del
-              Toyota Production System, adaptados a la realidad de cada empresa.
+              Formación práctica para que líderes y equipos aprendan a observar procesos, identificar pérdidas,
+              trabajar con estándares, resolver problemas y gestionar mejoras dentro de su propia operación.
             </p>
           </div>
 
@@ -306,8 +302,8 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Programas estructurados para profundizar conceptos de TPS, estabilidad
-                operativa, estandarización y mejora continua.
+                Formación práctica para equipos y líderes, enfocada en desarrollar capacidades que puedan aplicarse
+                directamente sobre problemas reales de la operación.
               </p>
 
               <button
@@ -352,8 +348,8 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-              Ebooks, guías y herramientas desarrolladas para comprender principios de mejora
-              operativa y aplicarlos en situaciones reales de trabajo.
+              Guías, ebooks y recursos para comprender problemas operativos, analizar procesos
+              y aplicar principios de mejora en situaciones reales de planta.
             </p>
           </div>
 
@@ -365,8 +361,8 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Manuales y guías prácticas para profundizar en sistemas de producción,
-                TPS, Lean Manufacturing, estandarización y mejora continua.
+                Guías prácticas sobre productividad, estabilidad, estandarización,
+                resolución de problemas y gestión de operaciones.
               </p>
 
               <a
@@ -422,17 +418,18 @@ export default function Home() {
 
 
 
-              <p className="mt-4 text-lg leading-8 text-slate-600">
-                Experiencia real en operaciones industriales, estandarización y mejora
-                continua aplicada.
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                Experiencia desarrollada en Toyota, adaptada a la realidad de las PyMEs.
               </p>
 
-              <div className="mt-8 space-y-6 text-base leading-8 text-slate-600">
+              <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600">
                 <p>
-                  Con más de 15 años de experiencia en entornos industriales exigentes,
-                  he trabajado en la implementación real de principios del Toyota
-                  Production System (TPS), Lean Manufacturing y mejora continua en
-                  plantas de Toyota en Argentina y Brasil.
+                  Trabajé durante 14 años en Toyota Argentina y Brasil, en operaciones industriales
+                  vinculadas a productividad, estandarización, resolución de problemas y desarrollo de equipos.
+                </p>
+                <p>
+                  Actualmente trabajo junto a PyMEs industriales, adaptando esa experiencia
+                  a operaciones con estructuras, recursos y desafíos muy diferentes a los de una gran compañía.
                 </p>
 
                 <p className="italic text-slate-700">
@@ -443,17 +440,16 @@ export default function Home() {
                 </p>
 
                 <p>
-                  Hoy acompaño a dueños, gerentes, líderes y equipos que buscan
-                  recuperar estabilidad operativa, desarrollar personas y mejorar
-                  resultados a través de métodos simples, concretos y alineados con la
-                  realidad de planta.
+                  Hoy acompaño a dueños, gerentes y responsables de planta que necesitan mejorar
+                  productividad, recuperar capacidad y construir una forma de gestión que puedan
+                  sostener con su propio equipo.
                 </p>
               </div>
 
               <a href="/#consultoria"
                 className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800 hover:bg-slate-100"
               >
-                Ver consultoría
+               Mejora operativa
               </a>
             </div>
           </div>
@@ -467,21 +463,24 @@ export default function Home() {
               Cierre
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Mejorar procesos comienza por comprender cómo funcionan hoy.
+              Mejorar una operación comienza por entender dónde estan perdiendo recursos hoy.
             </h2>
-
+            <p>
+            Si querés hacer visibles las pérdidas que están consumiendo más tiempo, capacidad y recursos
+            de los necesarios, podemos empezar por evaluar el estado actual.
+            </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                href="/diagnosticos"
-                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-medium text-white"
+                href="#consultoria"
+                className="rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white"
               >
-                Explorar diagnósticos
+                Contactanos
               </a>
               <a
-                href="#consultoria"
-                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800"
+                href="/diagnosticos"
+                className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-800"
               >
-                Ver consultoría
+                Hacer autodiagnóstico
               </a>
             </div>
           </div>

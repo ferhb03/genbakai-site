@@ -222,7 +222,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
             <div className="max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-                CONSULTING
+                OPERATIONAL IMPROVEMENT
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -254,7 +254,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
                 >
-                VIEW CONSULTING BROCHURE
+                OPERATIONAL BROCHURE
                 </a>
             </div>
 
@@ -473,7 +473,7 @@ export default function Home() {
                 href="/en#consultoria"
                 className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800"
                 >
-                View consulting
+                View operational improvement
                 </a>
             </div>
             </div>

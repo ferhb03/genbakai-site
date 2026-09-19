@@ -27,10 +27,10 @@ export default function SiteFooter() {
     : {
         positioning: "Mejora operativa para PyMEs industriales.",
         description:
-          "Diagnósticos, consultoría y formación basados en principios del Toyota Production System.",
+          "Diagnósticos, mejoras en planta y formación basados en principios del Toyota Production System.",
         navigation: "Navegación",
         diagnostics: "Diagnósticos",
-        consulting: "Consultoría",
+        consulting: "Mejora operativa",
         training: "Formación",
         resources: "Recursos",
         about: "Acerca de Nosotros",
