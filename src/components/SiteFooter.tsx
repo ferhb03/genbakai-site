@@ -12,10 +12,10 @@ export default function SiteFooter() {
     ? {
         positioning: "Operational improvement for industrial SMEs.",
         description:
-          "Diagnostics, consulting and training based on Toyota Production System principles.",
+          "Self-assessments, on-site implementation and training for industrial SMEs.",
         navigation: "Navigation",
         diagnostics: "Diagnostics",
-        consulting: "Consulting",
+        consulting: "Operational Improvement",
         training: "Training",
         resources: "Resources",
         about: "About Us",

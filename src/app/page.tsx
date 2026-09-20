@@ -170,42 +170,47 @@ export default function Home() {
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Tres caminos para empezar
           </p>
+
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
             Empezamos según el problema que se necesita resolver.
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch">
           {paths.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-slate-200 p-6"
+              className="flex h-full flex-col rounded-3xl border border-slate-200 p-6"
             >
-              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <h3 className="text-xl font-semibold">
+                {item.title}
+              </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 {item.description}
               </p>
 
-              {item.href ? (
-                <Link
-                  href={item.href}
-                  className={`mt-6 inline-flex rounded-2xl px-4 py-4 text-sm font-semibold transition-colors ${
-                    item.variant === "primary"
-                      ? "bg-slate-900 text-white hover:bg-slate-800"
-                      : "border border-slate-300 text-slate-900 hover:bg-slate-100"
-                  }`}
-                >
-                  {item.button}
-                </Link>
-              ) : (
-                <button
-                  disabled
-                  className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-500 opacity-60 cursor-default"
-                >
-                  {item.button}
-                </button>
-              )}
+              <div className="mt-auto pt-6">
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={`inline-flex rounded-2xl px-4 py-4 text-sm font-semibold transition-colors ${
+                      item.variant === "primary"
+                        ? "bg-slate-900 text-white hover:bg-slate-800"
+                        : "border border-slate-300 text-slate-900 hover:bg-slate-100"
+                    }`}
+                  >
+                    {item.button}
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex cursor-default rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-500 opacity-60"
+                  >
+                    {item.button}
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -416,8 +421,6 @@ export default function Home() {
                 Fernando Benitez
               </h2>
 
-
-
               <p className="mt-6 text-lg leading-8 text-slate-600">
                 Experiencia desarrollada en Toyota, adaptada a la realidad de las PyMEs.
               </p>
@@ -446,11 +449,14 @@ export default function Home() {
                 </p>
               </div>
 
-              <a href="/#consultoria"
-                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800 hover:bg-slate-100"
-              >
-               Mejora operativa
-              </a>
+            <a  href="https://www.linkedin.com/in/fernando-horacio-benitez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+            >
+                Ver perfil de LinkedIn
+            </a>
+
             </div>
           </div>
         </div>
