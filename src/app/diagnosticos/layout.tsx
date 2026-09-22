@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Diagnósticos Lean | Genba-Kai",
+  title: "Diagnósticos operativos para PyMEs industriales | Genba-Kai",
   description:
-    "Evaluá 5S, Trabajo Estandarizado y Madurez Lean antes de implementar mejoras.",
+    "Herramientas de diagnóstico para observar el estado real de la operación, detectar brechas y ordenar prioridades antes de intervenir.",
 
   openGraph: {
-    title: "Descubrí oportunidades de mejora antes de invertir en cambios",
+    title: "Diagnósticos operativos para PyMEs industriales | Genba-Kai",
     description:
-      "Checklist 5S, Trabajo Estandarizado y Madurez Lean para detectar brechas y ordenar prioridades.",
+      "Herramientas de diagnóstico para observar el estado real de la operación, detectar brechas y ordenar prioridades antes de intervenir.",
     url: "https://genbakai.com/diagnosticos",
     siteName: "Genba-Kai",
     images: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "https://genbakai.com/og-diagnosticos.png",
         width: 1200,
         height: 630,
-        alt: "Diagnósticos operativos de Genba-Kai",
+        alt: "Diagnósticos operativos para PyMEs industriales",
       },
     ],
     type: "website",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Descubrí oportunidades de mejora antes de invertir en cambios",
+    title: "Diagnósticos operativos para PyMEs industriales | Genba-Kai",
     description:
-      "Tres diagnósticos gratuitos de 5S, Trabajo Estandarizado y Madurez Lean.",
+      "Herramientas para evaluar pérdidas operativas, 5S, trabajo estandarizado y madurez operativa.",
     images: ["https://genbakai.com/og-diagnosticos.png"],
   },
 };
