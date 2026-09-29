@@ -417,17 +417,17 @@ export default function Home() {
             <div className="rounded-3xl border border-slate-200 p-6">
               <h3 className="text-xl font-semibold">Misión</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Ayudar a empresas industriales a construir operaciones más estables, eficientes y autónomas,
-                reduciendo pérdidas y dependencia de la gestión cotidiana, para que sus líderes puedan concentrarse en dirigir,
-                desarrollar y tomar decisiones de mayor impacto para el futuro de la empresa.
+                Ayudar a empresas industriales a construir operaciones estables, eficientes y autónomas,
+                reduciendo pérdidas y la dependencia de la gestión cotidiana, para que sus líderes puedan enfocarse
+                en dirigir, desarrollar equipos y tomar decisiones estratégicas de alto impacto.
               </p>
             </div>
             <div className="rounded-3xl border border-slate-200 p-6">
               <h3 className="text-xl font-semibold">Visión</h3>
               <p className="mt-3 text-sm leading-6 text-slate-600">
                 Contribuir a desarrollar PyMEs industriales capaces de crecer de manera ordenada y competitiva,
-                con sistemas productivos más eficientes, estables y autónomos, que no dependan de la intervención
-                permanente de sus dueños y gerentes.
+                con operaciones que funcionen de forma estable, mejoren continuamente y puedan sostenerse con sus
+                propios equipos, sin depender de la intervención constante de sus dueños y gerentes.
               </p>
             </div>
           </div>
