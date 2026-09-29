@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
@@ -313,7 +312,7 @@ export default function Home() {
 
               <button
                 disabled
-                className="mt-6 rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-slate-500 opacity-60 cursor-default"
+                className="mt-6 rounded-2xl border border-slate-300 px-4 py-4 text-sm font-medium text-slate-500 opacity-60 cursor-default"
               >
                 Próximamente
               </button>
@@ -331,7 +330,7 @@ export default function Home() {
 
               <a
                 href="mailto:fernando.benitez@genbakai.com?subject=Consulta%20sobre%20capacitaci%C3%B3n%20Genba-Kai"
-                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
+                className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-4 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
               >
                 Consultar
               </a>
@@ -372,7 +371,7 @@ export default function Home() {
 
               <a
                 href="/ebooks"
-                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+                className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
               >
                 Ver ebooks
               </a>
@@ -397,8 +396,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SOBRE GENBA-KAI */}
+      <section id="sobre" className="bg-white py-15 md:scroll-mt-34">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="max-w-5xl">
+            <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+              Sobre Genba-Kai
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+              Construir sistemas de producción que puedan sostenerse
+              sin depender de la intervención constante.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">
+              Genba-Kai trabaja con empresas industriales para transformar operaciones dependientes de la
+              gestión cotidiana en sistemas más estables, eficientes y autónomos.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">Misión</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Ayudar a empresas industriales a construir operaciones más estables, eficientes y autónomas,
+                reduciendo pérdidas y dependencia de la gestión cotidiana, para que sus líderes puedan concentrarse en dirigir,
+                desarrollar y tomar decisiones de mayor impacto para el futuro de la empresa.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-slate-200 p-6">
+              <h3 className="text-xl font-semibold">Visión</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Contribuir a desarrollar PyMEs industriales capaces de crecer de manera ordenada y competitiva,
+                con sistemas productivos más eficientes, estables y autónomos, que no dependan de la intervención
+                permanente de sus dueños y gerentes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SOBRE FERNANDO */}
-      <section id="sobre" className="py-15 md:scroll-mt-34">
+      <section id="fernando" className="bg-slate-50 py-15 md:scroll-mt-34">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
 
@@ -431,8 +468,9 @@ export default function Home() {
                   vinculadas a productividad, estandarización, resolución de problemas y desarrollo de equipos.
                 </p>
                 <p>
-                  Actualmente trabajo junto a PyMEs industriales, adaptando esa experiencia
-                  a operaciones con estructuras, recursos y desafíos muy diferentes a los de una gran compañía.
+                  Actualmente trabajo junto a PyMEs industriales, adaptando mi experiencia a operaciones con estructuras,
+                  recursos y desafíos muy diferentes a los de una gran compañía, para mejorar productividad,
+                  recuperar capacidad y construir una forma de gestión que puedan sostener con su propio equipo.
                 </p>
 
                 <p className="italic text-slate-700">
@@ -442,11 +480,6 @@ export default function Home() {
                   claros, aplicables y sostenibles.
                 </p>
 
-                <p>
-                  Hoy acompaño a dueños, gerentes y responsables de planta que necesitan mejorar
-                  productividad, recuperar capacidad y construir una forma de gestión que puedan
-                  sostener con su propio equipo.
-                </p>
               </div>
 
             <a  href="https://www.linkedin.com/in/fernando-horacio-benitez/"
@@ -462,7 +495,7 @@ export default function Home() {
         </div>
        </section>
 
-      <section className="bg-slate-50 py-15">
+      <section className="py-15">
         <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center sm:p-12">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">

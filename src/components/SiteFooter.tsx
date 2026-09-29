@@ -10,15 +10,15 @@ export default function SiteFooter() {
 
   const content = isEnglish
     ? {
-        positioning: "Operational improvement for industrial SMEs.",
+        positioning: "Operational improvement for small and medium-sized manufacturers.",
         description:
-          "Self-assessments, on-site implementation and training for industrial SMEs.",
+          "Assessments, hands-on improvement and training grounded in Toyota Production System principles.",
         navigation: "Navigation",
-        diagnostics: "Diagnostics",
+        diagnostics: "Assessments",
         consulting: "Operational Improvement",
         training: "Training",
         resources: "Resources",
-        about: "About Us",
+        about: "About Genba-Kai",
         information: "Information",
         privacy: "Privacy Policy",
         rights: "All rights reserved.",
@@ -99,7 +99,7 @@ export default function SiteFooter() {
   };
   
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-slate-200 bg-slate-50">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-12">
         <div className="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr] md:gap-12">
           <div>

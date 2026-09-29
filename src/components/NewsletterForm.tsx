@@ -23,18 +23,18 @@ export default function NewsletterForm({
           nameLabel: "Name",
           namePlaceholder: "Your name",
           emailLabel: "Email address",
-          emailPlaceholder: "Your email",
+          emailPlaceholder: "Your email address",
           loading: "Subscribing...",
           submit: "Subscribe",
           emailRequired: "Enter your email address.",
-          genericError: "The subscription could not be completed.",
+          genericError: "We could not complete your subscription. Please try again.",
           alreadySubscribed:
-            "This email is already registered to receive Genba-Kai updates.",
+            "This email address is already subscribed to Genba-Kai updates.",
           success:
-            "Done. New Genba-Kai resources and updates will be sent to this email.",
+            "You’re subscribed! We’ll email you when new Genba-Kai resources are available.",
           unexpectedError: "An error occurred. Please try again.",
           privacy:
-            "Only Genba-Kai related updates will be sent. You can unsubscribe at any time.",
+            "We’ll only send you updates from Genba-Kai. You can unsubscribe at any time.",
         }
       : {
           nameLabel: "Nombre",

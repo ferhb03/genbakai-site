@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
@@ -7,15 +6,15 @@ export default function Home() {
     {
         title: "Start with a self-assessment",
         description:
-        "Review key areas of your operation and identify signals that may require deeper analysis.",
+        "Assess your current operation and identify areas that need a closer look.",
         button: "Self-assessments",
-        href: "/diagnosticos",
+        href: "/en/diagnosticos",
         variant: "primary",
     },
     {
         title: "On-site implementation and support",
         description:
-        "Practical support to improve stability, productivity and management capability directly in the operation.",
+        "Hands-on support to stabilize processes, improve productivity and strengthen daily management.",
         button: "The Genba-Kai approach",
         href: "#consultoria",
         variant: "secondary",
@@ -23,7 +22,7 @@ export default function Home() {
     {
     title: "Training",
     description:
-        "Courses and company training designed to develop practical judgment, management capabilities and continuous improvement skills.",
+        "Practical courses and team training to develop problem-solving skills, strengthen leadership and support continuous improvement.",
     button: "View training",
     href: "#formacion",
     variant: "secondary",
@@ -38,20 +37,20 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
             <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            OPERATIONAL IMPROVEMENT FOR INDUSTRIAL SMEs
+            OPERATIONAL IMPROVEMENT FOR SMALL AND MEDIUM-SIZED MANUFACTURERS
             </p>
 
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-            Make operational losses visible. Improve productivity, capacity and control.
+            Make waste visible. Improve productivity, free up capacity and gain control of your operations.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            Helping to identify and implement improvements in the problems that increase costs and limit production:
-            scrap, rework, waiting time, downtime, quality issues and processes that depend too heavily on specific people.
+            Genba-Kai helps you address the problems that drive up costs and limit output:
+            scrap, rework, waiting, downtime, quality issues and processes that rely too heavily on a few key people.
             </p>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 font-semibold">
-            Working directly on the shop floor with your team to implement improvements and build the internal capability to sustain them.
+            We work alongside your team on the shop floor to solve problems and develop the skills and routines needed to sustain improvements.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -75,7 +74,7 @@ export default function Home() {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
                 <img
                 src="/hero-industrial.png"
-                alt="Industrial environment with standardized work and visual management"
+                alt="Shop floor with standardized work and visual management"
                 className="w-full h-full object-cover"
                 />
             </div>
@@ -95,8 +94,8 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            A plant can keep producing while losing time, capacity and resources through
-            problems that gradually become part of the normal routine.
+            A plant can meet its production targets while wasting time, materials and capacity
+            on recurring problems that have become part of the daily routine.
             </p>
 
         </div>
@@ -104,21 +103,21 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 p-6">
             <h3 className="text-lg font-semibold">
-                Losses that are not measured
+                Unmeasured losses
             </h3>
 
             <p className="mt-3 text-sm leading-6 text-slate-600">
-                Scrap, rework, waiting time and downtime may be known, but their real operational impact is not always quantified.
+                Teams may recognize scrap, rework, waiting and downtime without knowing how much they affect cost, capacity and delivery.
             </p>
             </div>
 
             <div className="rounded-3xl border border-slate-200 p-6">
             <h3 className="text-lg font-semibold">
-                Inefficiencies absorbed into the operation
+                Hidden costs of inefficiency
             </h3>
 
             <p className="mt-3 text-sm leading-6 text-slate-600">
-                When losses become part of the daily routine, it becomes difficult to understand how much capacity and cost they are consuming.
+                When waste becomes part of everyday work, it is easy to overlook the capacity it ties up and the costs it adds.
             </p>
             </div>
 
@@ -128,7 +127,7 @@ export default function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-6 text-slate-600">
-                Repeated issues, firefighting and dependency on key people can become accepted as part of the way the operation works.
+                Recurring problems, firefighting and reliance on a few key people can become accepted as the normal way of working.
             </p>
             </div>
         </div>
@@ -143,39 +142,39 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Understand the real operation before deciding what to improve.
+                Understand how work is actually done before deciding what to improve.
             </h2>
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">
-                Understand the real operation
+                Go and see the work
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Improvement starts by understanding how the process actually works today.
+                Start at the gemba: observe the work firsthand and understand the current process with the people who do it.
                 </p>
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">
-                Identify and prioritize losses
+                Measure losses and set priorities
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Observing the work on the shop floor, measure deviations and focus
-                on the problems with the greatest operational impact.
+                Measure losses, identify gaps between actual performance and the standard,
+                and focus on the problems with the greatest impact.
                 </p>
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <h3 className="text-lg font-semibold">
-                Implement and build capability
+                Improve processes and develop people
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Working with the team to implement improvements, establish standards and build the capability to sustain them.
+                Work with the team to address root causes, establish standards and build the daily routines needed to sustain and improve results.
                 </p>
             </div>
             </div>
@@ -189,7 +188,7 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Three ways to start improving your operation
+            Start with the support your operation needs.
             </h2>
         </div>
 
@@ -242,14 +241,14 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                From operational problems to implemented improvements.
+                Turn operational problems into lasting improvements.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-                Working directly with industrial SMEs to analyze operational problems, define priorities
-                and implement improvements in productivity, capacity, quality, standards and daily management.
-                The goal is not only to improve performance, but to leave behind a way of working that
-                the team can sustain and continue improving.
+                We help small and medium-sized manufacturers understand operational problems, set priorities
+                and improve productivity, capacity and quality through standardized work, problem solving and daily management.
+                Our approach draws on Toyota Production System (TPS) and Lean manufacturing principles,
+                adapted to your operation so your team can sustain results and keep improving.
             </p>
             </div>
 
@@ -260,8 +259,8 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Working directly with the team to identify root causes, implement improvements,
-                establish standards and strengthen the routines needed to sustain results.
+                We work alongside your team to identify root causes, put improvements into practice,
+                establish standards and strengthen the routines that sustain results.
                 </p>
 
                 <a
@@ -270,7 +269,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-2xl bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
                 >
-                Operational brochure
+                Download brochure
                 </a>
             </div>
 
@@ -280,8 +279,8 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Online mentoring for owners, managers and operational leaders who need to analyze
-                operational challenges, set priorities and make better implementation decisions.
+                Online mentoring for owners, managers and production leaders who need to work through
+                operational challenges, set priorities and decide how to put improvements into practice.
                 </p>
 
                 <a
@@ -304,12 +303,12 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Develop the capabilities needed to sustain operational improvement.
+                Build the skills to sustain continuous improvement.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-                Practical training designed to develop operational judgment, problem-solving capability
-                and management routines that can be applied directly to real situations on the shop floor.
+                Develop the ability to observe processes, recognize waste, solve problems and manage daily performance
+                through practical training built around real situations on the shop floor.
             </p>
             </div>
 
@@ -320,7 +319,7 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Structured programs focused on operational stability, standardization,
+                Structured courses in process stability, standardized work,
                 problem solving and continuous improvement.
                 </p>
 
@@ -334,12 +333,12 @@ export default function Home() {
 
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
                 <h3 className="text-xl font-semibold">
-                In-company training
+                Training for your team
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Practical training for teams and leaders, designed around real operational
-                challenges and applied directly to the workplace.
+                Training tailored to your team and leaders, with practical exercises
+                based on the challenges they face at work.
                 </p>
 
                 <a
@@ -362,12 +361,12 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Practical resources to improve how you see and manage your operation.
+                Practical tools to understand and improve your operations.
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600">
-                Ebooks, guides and practical tools designed to help industrial teams understand
-                operational problems and apply improvement principles in real working environments.
+                Ebooks, guides and tools to help manufacturing teams understand
+                operational problems and apply Lean principles in their daily work.
             </p>
             </div>
 
@@ -379,7 +378,7 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Practical guides on productivity, operational stability, standardization,
+                Practical guides to productivity, process stability, standardized work,
                 problem solving and continuous improvement.
                 </p>
 
@@ -398,7 +397,7 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                Receive updates about new self-assessments, articles, ebooks, training and practical Genba-Kai resources.
+                Get updates on new self-assessments, articles, ebooks, courses and practical tools from Genba-Kai.
                 </p>
 
                 <div className="mt-6">
@@ -409,8 +408,40 @@ export default function Home() {
         </div>
         </section>
 
-        {/* SOBRE */}
-        <section id="sobre" className="py-15 scroll-mt-28 py-15">
+        {/* ABOUT GENBA-KAI */}
+        <section id="sobre" className="bg-white py-15 md:scroll-mt-34">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-5xl">
+              <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
+                About Genba-Kai
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+                Build systems your team can sustain without constant intervention.
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                Genba-Kai helps manufacturers build stable, efficient operations that their teams can manage without constant intervention from owners and managers.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">Mission</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Help manufacturers build more stable, efficient operations that their teams can sustain, reducing waste and the need for constant management intervention. This gives leaders more time to set direction, develop people and make decisions that shape the future of the business.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-slate-200 p-6">
+                <h3 className="text-xl font-semibold">Vision</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Help small and medium-sized manufacturers grow in a structured way and strengthen their competitiveness, with efficient, stable production systems that their teams can sustain without constant intervention from owners and managers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT FERNANDO */}
+        <section id="fernando" className="bg-slate-50 py-15 md:scroll-mt-34">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[0.85fr_1.15fr] md:items-center">
             <div>
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
@@ -432,29 +463,25 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
-                Shop-floor experience in production systems, process engineering and people development.
+                Hands-on experience in production systems, process engineering and people development.
             </p>
 
             <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600">
             <p>
-                I spent 14 years working at Toyota Argentina and Toyota do Brasil in industrial
-                operations focused on productivity, standardization, problem solving and team development.
+                I spent 14 years at Toyota Argentina and Toyota do Brasil, working in manufacturing
+                with a focus on productivity, standardized work, problem solving and team development.
             </p>
 
             <p>
-                Today, I work with industrial SMEs, adapting that experience to operations with
-                very different structures, resources and challenges from those of a large company.
+                Today, I help small and medium-sized manufacturers apply that experience to their own operations,
+                adapting it to their resources, organizational structure and challenges.
+                Together, we improve productivity, free up capacity and develop management routines their teams can sustain.
             </p>
 
             <p className="italic text-slate-700">
-                My practical approach is based on direct observation of the process, operational
-                standardization and solving real problems, simplifying complexity and turning it
-                into clearer, more applicable and sustainable ways of working.
-            </p>
-
-            <p>
-                I now work with owners, managers and plant leaders who need to improve productivity,
-                recover capacity and build a management approach their own teams can sustain.
+                My approach starts with observing the work firsthand, establishing clear standards
+                and addressing real problems. I help teams make complex processes easier to understand,
+                manage and improve.
             </p>
             </div>
 
@@ -478,11 +505,11 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-                Improving an operation starts by understanding where unnecessary losses are being generated.    
+                Start by understanding where your operation is losing time, materials and capacity.
             </h2>
             <p>
-                If you want to identify where your operation is consuming more time, capacity and resources
-                than necessary, we can start by reviewing the current state together.
+                Let’s review your current processes, make waste visible
+                and identify where improvement will have the greatest impact.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -498,7 +525,7 @@ export default function Home() {
                 href="/en/diagnosticos"
                 className="rounded-2xl border border-slate-300 px-4 py-4 text-sm font-normal text-slate-800"
                 >
-                Start self-assessment
+                Start a self-assessment
                 </a>
 
             </div>

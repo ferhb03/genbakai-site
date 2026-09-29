@@ -169,12 +169,12 @@ useEffect(() => {
 
   const content = isEnglish
     ? {
-        tagline: "Diagnostics, operational improvement and training",
-        diagnostics: "DIAGNOSTICS",
+        tagline: "Assessments, operational improvement and training",
+        diagnostics: "ASSESSMENTS",
         consulting: "OPERATIONAL IMPROVEMENT",
         training: "TRAINING",
         resources: "RESOURCES",
-        about: "ABOUT US",
+        about: "GENBA-KAI",
       }
     : {
         tagline: "Diagnósticos, mejoras en planta y formación",
@@ -182,7 +182,7 @@ useEffect(() => {
         consulting: "MEJORA OPERATIVA",
         training: "FORMACIÓN",
         resources: "RECURSOS",
-        about: "NOSOTROS",
+        about: "GENBA-KAI",
       };
 
   const handleLogoClick = (
@@ -256,7 +256,7 @@ useEffect(() => {
             <div className="text-xs leading-tight text-slate-500 md:text-sm">
               {isEnglish ? (
                 <>
-                  Diagnostics, operational
+                  Assessments, operational
                   <br />
                   improvement and training
                 </>
@@ -419,7 +419,7 @@ useEffect(() => {
             </span>
           </a>
 
-          {/* FERNANDO */}
+          {/* SOBRE GENBA-KAI */}
           <a
             href={isEnglish ? "/en#sobre" : "/#sobre"}
             onClick={handleNavClick}
