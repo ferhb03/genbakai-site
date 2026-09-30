@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Genba-Kai | Diagnósticos y Mejora Operativa",
   description:
-    "Diagnósticos, formación y consultoría en estabilidad operativa basados en Toyota Production System (TPS).",
+    "Diagnósticos, mejoras en planta y formación en estabilidad operativa basados en Toyota Production System (TPS).",
 };
 
 export default function RootLayout({
