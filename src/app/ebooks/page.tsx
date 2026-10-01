@@ -42,9 +42,19 @@ const ebooks = [
     eyebrow: "Toyota Production System",
     title: "De las Herramientas al Sistema",
     subtitle:
-      "Por qué aplicar herramientas Lean de forma aislada no alcanza para transformar una operación.",
-    description:
-      "Una guía para comprender cómo los principios del Toyota Production System se conectan entre sí —estabilidad, trabajo estandarizado, flujo, calidad, resolución de problemas y desarrollo de personas— y cómo construir un sistema de trabajo propio, coherente y sostenible.",
+      "Por qué aplicar 5S, Kanban o Kaizen de forma aislada no alcanza para transformar una operación.",
+    description: (
+      <>
+        <strong>
+          Una guía para comprender cómo funciona el TPS como sistema:
+        </strong>{" "}
+        estabilidad, trabajo estandarizado, flujo, calidad, resolución de
+        problemas y desarrollo de personas.
+      </>
+    ),
+
+      note:
+      "El TPS se difundió internacionalmente bajo el nombre de Lean Manufacturing, pero su mayor valor aparece cuando se entienden como partes de un sistema y no como herramientas separadas.",
     details: "50 páginas · PDF · Español",
   },
 ];
@@ -79,12 +89,18 @@ export default function EbooksPage() {
               <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">
                 {ebook.eyebrow}
               </p>
+
               <h2 className="mt-3 text-2xl font-semibold">{ebook.title}</h2>
               <p className="mt-3 text-base font-medium leading-7 text-slate-700">
                 {ebook.subtitle}
               </p>
+
               <p className="mt-4 text-base leading-7 text-slate-600">
                 {ebook.description}
+              </p>
+
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                {ebook.note}
               </p>
 
               <div className="mt-auto pt-8">
