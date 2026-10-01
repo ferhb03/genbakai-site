@@ -13,7 +13,7 @@ const resources = {
   "de-las-herramientas-al-sistema": {
     title: "De las Herramientas al Sistema",
     filename: "De las Herramientas al Sistema.pdf",
-    filePath: "De-las-Herramientas-al-Sistema.pdf",
+    filePath: "De_las_Herramientas_al_Sistema.pdf",
   },
 } as const;
 

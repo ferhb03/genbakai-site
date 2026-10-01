@@ -178,7 +178,7 @@ export default function EbookLeadForm({
               className="mt-1 h-4 w-4 shrink-0 accent-slate-900"
             />
             <span>
-              También quiero recibir nuevos recursos y novedades de Genba-Kai.
+              También quiero recibir nuevos recursos y novedades de Genba-Kai (Opcional).
             </span>
           </label>
 
