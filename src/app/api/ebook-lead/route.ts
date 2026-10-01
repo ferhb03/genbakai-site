@@ -145,8 +145,14 @@ export async function POST(request: Request) {
     );
     const pdfContent = await readFile(pdfPath);
     const safeFirstName = escapeHtml(firstName);
+    const pdfHash = createHash("sha256")
+      .update(pdfContent)
+      .digest("hex");
+
+    const emailTemplateVersion = "v2";
+
     const idempotencyKey = createHash("sha256")
-      .update(`${email}:${resourceSlug}:${new Date().toISOString().slice(0, 10)}`)
+      .update(`${email}:${resourceSlug}:${pdfHash}:${emailTemplateVersion}`)
       .digest("hex");
 
     const emailResponse = await fetch("https://api.resend.com/emails", {
